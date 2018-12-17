@@ -1,0 +1,31 @@
+<template>
+    <div>
+        <button class="d-button">按钮</button>
+    </div>
+</template>
+
+<script>
+    export default {
+
+    }
+</script>
+
+<style lang="scss">
+    .d-button {
+        font-size: var(--font-size);
+        height: var(--button-height);
+        background-color: var(--button-bg);
+        padding: 0 1em;
+        border-radius: var(--border-radius);
+        border: 1px solid var(--border-color-hover);
+        &:hover {
+            border-color: var(--border-color-hover);
+        }
+        &:active {
+            background-color: var(--button-active-bg);
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+</style>
