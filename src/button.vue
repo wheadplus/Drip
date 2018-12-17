@@ -1,37 +1,46 @@
 <template>
-
-    <button class="d-button">
-        
+    <button class="d-button" :class="[`icon-${iconPosition}`]">
         <svg v-if="icon" class="icon" aria-hidden="true">
             <use :xlink:href="`#i-${icon}`"></use>
         </svg>
-        <slot></slot>
+        <div class="content">
+            <slot></slot>
+        </div>
     </button>
-
 </template>
 
 <script>
     export default {
-        props: ["icon"]
+        props: {
+            icon: {},
+            iconPosition: {
+                type: String,
+                default: "left",
+                validator: function (value) {
+                    return !(value !== "left" && value !== "right");
+                }
+            }
+        }
     }
 </script>
 
 <style lang="scss">
     .d-button {
-        font-size: var(--font-size);
-        height: var(--button-height);
-        background-color: var(--button-bg);
-        padding: 0 1em;
-        border-radius: var(--border-radius);
-        border: 1px solid var(--border-color-hover);
-        &:hover {
-            border-color: var(--border-color-hover);
-        }
-        &:active {
-            background-color: var(--button-active-bg);
-        }
-        &:focus {
-            outline: none;
+        font-size: var(--font-size);  height: var(--button-height);
+        background-color: var(--button-bg);  padding: 0 1em;
+        border-radius: var(--border-radius);  border: 1px solid var(--border-color-hover);
+        display: inline-flex; justify-content: center; align-items: center;
+        vertical-align: middle;/*解决对齐问题*/
+        &:hover {  border-color: var(--border-color-hover);  }
+        &:active {  background-color: var(--button-active-bg);  }
+        &:focus {  outline: none;  }
+
+        >.icon {  order: 1; margin-right: .4em; }
+        >.content {  order: 2;  }
+        &.icon-right {
+            > .icon {  order: 2;  margin-left: .4em; margin-right: 0;}
+            > .content {  order: 1;  }
         }
     }
+
 </style>
