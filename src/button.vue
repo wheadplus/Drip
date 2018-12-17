@@ -1,12 +1,18 @@
 <template>
-    <div>
-        <button class="d-button">按钮</button>
-    </div>
+
+    <button class="d-button">
+        
+        <svg v-if="icon" class="icon" aria-hidden="true">
+            <use :xlink:href="`#i-${icon}`"></use>
+        </svg>
+        <slot></slot>
+    </button>
+
 </template>
 
 <script>
     export default {
-
+        props: ["icon"]
     }
 </script>
 
