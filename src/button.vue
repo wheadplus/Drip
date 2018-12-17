@@ -1,8 +1,8 @@
 <template>
     <button class="d-button" :class="[`icon-${iconPosition}`]">
-        <svg v-if="icon" class="icon" aria-hidden="true">
-            <use :xlink:href="`#i-${icon}`"></use>
-        </svg>
+        <d-icon class="icon" v-if="icon" :name="icon">
+        </d-icon>
+        <d-icon class="loading" name="loading"></d-icon>
         <div class="content">
             <slot></slot>
         </div>
@@ -25,6 +25,11 @@
 </script>
 
 <style lang="scss">
+    @keyframes spin {
+        0% {transform: rotate(0deg); }
+        100% {transform: rotate(360deg); }
+    }
+    
     .d-button {
         font-size: var(--font-size);  height: var(--button-height);
         background-color: var(--button-bg);  padding: 0 1em;
@@ -40,6 +45,9 @@
         &.icon-right {
             > .icon {  order: 2;  margin-left: .4em; margin-right: 0;}
             > .content {  order: 1;  }
+        }
+        >.loading { animation: spin 2s infinite linear;
+
         }
     }
 
