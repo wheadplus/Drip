@@ -1,8 +1,9 @@
 <template>
-    <button class="d-button" :class="[`icon-${iconPosition}`]">
-        <d-icon class="icon" v-if="icon" :name="icon">
+    <button class="d-button" :class="[`icon-${iconPosition}`]"
+        @click="$emit('click')">
+        <d-icon class="icon" v-if="icon && !isLoading" :name="icon">
         </d-icon>
-        <d-icon class="loading" name="loading"></d-icon>
+        <d-icon class="loading" v-if="isLoading" name="loading"></d-icon>
         <div class="content">
             <slot></slot>
         </div>
@@ -13,12 +14,21 @@
     export default {
         props: {
             icon: {},
+            isLoading: {
+                type: Boolean,
+                default: false
+            },
             iconPosition: {
                 type: String,
                 default: "left",
                 validator: function (value) {
                     return !(value !== "left" && value !== "right");
                 }
+            }
+        },
+        methods: {
+            x() {
+                this.$emit('click')
             }
         }
     }
@@ -39,16 +49,13 @@
         &:hover {  border-color: var(--border-color-hover);  }
         &:active {  background-color: var(--button-active-bg);  }
         &:focus {  outline: none;  }
-
         >.icon {  order: 1; margin-right: .4em; }
         >.content {  order: 2;  }
         &.icon-right {
             > .icon {  order: 2;  margin-left: .4em; margin-right: 0;}
             > .content {  order: 1;  }
         }
-        >.loading { animation: spin 2s infinite linear;
-
-        }
+        >.loading { animation: spin 2s infinite linear;  }
     }
 
 </style>

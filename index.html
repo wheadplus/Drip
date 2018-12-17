@@ -26,10 +26,10 @@
 </head>
 <body>
     <div id="app">
-        <d-icon name="upload"></d-icon>
-        <d-button>按钮</d-button>
-        <d-button icon="left">按钮</d-button>
-        <d-button icon="settings" icon-position="right">
+        <d-icon  name="upload"></d-icon>
+        <d-button :is-loading="loading1" @click="loading1 = !loading1">按钮</d-button>
+        <d-button :is-loading="loading2" @click="loading2 = !loading2" icon="left">按钮</d-button>
+        <d-button :is-loading="loading3" @click="loading3 = !loading3" icon="settings" icon-position="right">
             
             设置
         </d-button>
