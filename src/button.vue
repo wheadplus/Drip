@@ -25,11 +25,6 @@
                     return !(value !== "left" && value !== "right");
                 }
             }
-        },
-        methods: {
-            x() {
-                this.$emit('click')
-            }
         }
     }
 </script>

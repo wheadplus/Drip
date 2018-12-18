@@ -14,6 +14,7 @@
   "license": "ISC",
   "devDependencies": {
     "@vue/component-compiler-utils": "^2.3.1",
+    "chai": "^4.2.0",
     "parcel-bundler": "^1.10.3",
     "sass": "^1.15.2",
     "vue-template-compiler": "^2.5.21"
@@ -23,6 +24,6 @@
     "vue-hot-reload-api": "^2.3.1"
   },
   "alias": {
-    "vue" : "./node_modules/vue/dist/vue.common.js"
+    "vue": "./node_modules/vue/dist/vue.common.js"
   }
 }
