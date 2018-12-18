@@ -18,15 +18,17 @@ new Vue({
 
 //单元测试
 import chai from 'chai'
+import spies from 'chai-spies'
+
+chai.use(spies)
 
 const expect = chai.expect
 
-/*
-* 输入有几个就断言几个
-*
-*
-*/
+
+//输入有几个就断言几个
+
 {
+    //测试icon
     const Constructor = Vue.extend(Button)
     const vm = new Constructor({
         propsData: {
@@ -41,6 +43,7 @@ const expect = chai.expect
 }
 
 {
+    //测试isLoading
     const Constructor = Vue.extend(Button)
     const vm = new Constructor({
         propsData: {
@@ -56,6 +59,7 @@ const expect = chai.expect
 }
 
 {
+    //测试iconPosition为null的情况
     //css类断言，需要挂载页面元素,否则检测不到css属性
     const Constructor = Vue.extend(Button)
     const vm = new Constructor({
@@ -74,6 +78,7 @@ const expect = chai.expect
 }
 
 {
+    //测试iconPosition为right的情况
     const Constructor = Vue.extend(Button)
     const vm = new Constructor({
         propsData: {
@@ -92,6 +97,8 @@ const expect = chai.expect
 }
 
 {
+    //测试click函数 mock
+    //使用chai-spies 监听函数
     const Constructor = Vue.extend(Button)
     const vm = new Constructor({
         propsData: {
@@ -99,12 +106,11 @@ const expect = chai.expect
         }
     })
     vm.$mount()
-    let button = vm.$el
-    vm.$on("click",()=> {
-        expect(1).to.eq(1)
-    })
 
+    let spy = chai.spy(function(){})
+    vm.$on('click',spy)
+    let button = vm.$el
     button.click()
-    vm.$el.remove()
+    expect(spy).to.have.been.called()
     vm.$destroy()
 }
