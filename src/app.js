@@ -28,7 +28,7 @@ const expect = chai.expect
 //输入有几个就断言几个
 
 {
-    //测试icon
+    //测试按钮含有 icon
     const Constructor = Vue.extend(Button)
     const vm = new Constructor({
         propsData: {
@@ -43,7 +43,7 @@ const expect = chai.expect
 }
 
 {
-    //测试isLoading
+    //测试按钮含有 isLoading
     const Constructor = Vue.extend(Button)
     const vm = new Constructor({
         propsData: {
@@ -59,7 +59,7 @@ const expect = chai.expect
 }
 
 {
-    //测试iconPosition为null的情况
+    //测试按钮iconPosition为null的情况
     //css类断言，需要挂载页面元素,否则检测不到css属性
     const Constructor = Vue.extend(Button)
     const vm = new Constructor({
@@ -78,7 +78,7 @@ const expect = chai.expect
 }
 
 {
-    //测试iconPosition为right的情况
+    //测试按钮iconPosition为right的情况
     const Constructor = Vue.extend(Button)
     const vm = new Constructor({
         propsData: {
@@ -97,8 +97,8 @@ const expect = chai.expect
 }
 
 {
-    //测试click函数 mock
-    //使用chai-spies 监听函数
+    //测试按钮click函数
+    //使用chai-spies mock 监听函数
     const Constructor = Vue.extend(Button)
     const vm = new Constructor({
         propsData: {

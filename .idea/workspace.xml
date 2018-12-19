@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7acf5c9c-6922-4c92-b203-23cda78f569e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/karma.conf.js" afterPath="$PROJECT_DIR$/karma.conf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app.js" afterPath="$PROJECT_DIR$/src/app.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,8 +23,18 @@
       <file leaf-file-name="button.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/button.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="632">
-              <caret line="46" column="23" lean-forward="false" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="23" />
+            <state relative-caret-position="178">
+              <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="karma.conf.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/karma.conf.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -36,15 +50,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="704">
-              <caret line="99" column="15" lean-forward="false" selection-start-line="99" selection-start-column="15" selection-end-line="99" selection-end-column="15" />
+            <state relative-caret-position="280">
+              <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
                 <element signature="e#357#380#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="18" column="22" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -71,6 +95,7 @@
         <option value="$PROJECT_DIR$/src/button-group.vue" />
         <option value="$PROJECT_DIR$/src/button.vue" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/karma.conf.js" />
         <option value="$PROJECT_DIR$/src/app.js" />
       </list>
     </option>
@@ -87,7 +112,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="857" />
+    <option name="x" value="762" />
+    <option name="y" value="84" />
     <option name="width" value="1076" />
     <option name="height" value="1037" />
   </component>
@@ -118,11 +144,6 @@
               <item name="drip-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="drip-demo" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="drip-demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="drip-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -134,7 +155,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="/usr/bin/node" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.CSS" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -151,6 +172,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="7acf5c9c-6922-4c92-b203-23cda78f569e" name="Default" comment="" />
@@ -161,7 +185,7 @@
       <workItem from="1545016851124" duration="325000" />
       <workItem from="1545050139529" duration="1217000" />
       <workItem from="1545051898881" duration="4521000" />
-      <workItem from="1545090687345" duration="8636000" />
+      <workItem from="1545090687345" duration="12911000" />
     </task>
     <task id="LOCAL-00001" summary="props 验证 iconPosition left or right">
       <created>1545052214343</created>
@@ -230,10 +254,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14699000" />
+    <option name="totallyTimeSpent" value="18974000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="857" y="0" width="1076" height="1037" extended-state="0" />
+    <frame x="762" y="84" width="1076" height="1037" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17100371" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -353,6 +377,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="22" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#357#380#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="512">
@@ -363,20 +406,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/button.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="632">
-          <caret line="46" column="23" lean-forward="false" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="23" />
+        <state relative-caret-position="178">
+          <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app.js">
+    <entry file="file://$PROJECT_DIR$/karma.conf.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="99" column="15" lean-forward="false" selection-start-line="99" selection-start-column="15" selection-end-line="99" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <element signature="e#357#380#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="200">
+          <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
