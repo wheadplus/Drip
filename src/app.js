@@ -19,86 +19,77 @@ new Vue({
 //单元测试
 import chai from 'chai'
 import spies from 'chai-spies'
-
 chai.use(spies)
 
 const expect = chai.expect
 
-
-//输入有几个就断言几个
-
+/*
+* 输入有几个就断言几个
+*
+*
+*/
 {
-    //测试按钮含有 icon
     const Constructor = Vue.extend(Button)
     const vm = new Constructor({
         propsData: {
-            icon: "settings"
+            icon: 'settings'
         }
-    })
-    vm.$mount()
-    let useElement = vm.$el.querySelector("use")
-    expect(useElement.getAttribute("xlink:href")).to.equal("#i-settings")
-    vm.$el.remove()
+    }).$mount()
+    const useElement = vm.$el.querySelector('use')
+    console.log(useElement.getAttribute('xlink:href'))
+    expect(useElement.getAttribute('xlink:href')).to.equal('#i-settings')
+    vm.$destroy()
+}
+{
+
+    const Constructor = Vue.extend(Button)
+    const vm = new Constructor({
+        propsData: {
+            icon: 'settings',
+            loading: true
+        }
+    }).$mount()
+    const useElements = vm.$el.querySelectorAll('use')
+    expect(useElements.length).to.equal(1)
+    console.log(useElements[0].getAttribute('xlink:href'))
+    expect(useElements[0].getAttribute('xlink:href')).to.equal('#i-loading')
     vm.$destroy()
 }
 
 {
-    //测试按钮含有 isLoading
-    const Constructor = Vue.extend(Button)
-    const vm = new Constructor({
-        propsData: {
-            icon: "settings",
-            isLoading: true
-        }
-    })
-    vm.$mount()
-    let useElement = vm.$el.querySelector("use")
-    expect(useElement.getAttribute("xlink:href")).to.equal("#i-loading")
-    vm.$el.remove()
-    vm.$destroy()
-}
-
-{
-    //测试按钮iconPosition为null的情况
-    //css类断言，需要挂载页面元素,否则检测不到css属性
-    const Constructor = Vue.extend(Button)
-    const vm = new Constructor({
-        propsData: {
-            icon: "settings"
-        }
-    })
-    let div = document.createElement("div")
+    const div = document.createElement('div')
     document.body.appendChild(div)
-    vm.$mount(div)
-    let svg = vm.$el.querySelector("svg")
-    let {order} = window.getComputedStyle(svg)
-    expect(order).to.equal("1")
-    vm.$el.remove()
-    vm.$destroy()
-}
-
-{
-    //测试按钮iconPosition为right的情况
     const Constructor = Vue.extend(Button)
     const vm = new Constructor({
         propsData: {
-            icon: "settings",
-            iconPosition:"right"
+            icon: 'settings',
         }
-    })
-    let div = document.createElement("div")
-    document.body.appendChild(div)
-    vm.$mount(div)
-    let svg = vm.$el.querySelector("svg")
-    let {order} = window.getComputedStyle(svg)
-    expect(order).to.equal("2")
+    }).$mount(div)
+    const icon = vm.$el.querySelector('svg')
+    console.log(getComputedStyle(icon).order)
+    expect(getComputedStyle(icon).order).to.eq('1')
     vm.$el.remove()
     vm.$destroy()
 }
 
 {
-    //测试按钮click函数
-    //使用chai-spies mock 监听函数
+    const div = document.createElement('div')
+    document.body.appendChild(div)
+    const Constructor = Vue.extend(Button)
+    const vm = new Constructor({
+        propsData: {
+            icon: 'settings',
+            iconPosition: 'right'
+        }
+    }).$mount(div)
+    const icon = vm.$el.querySelector('svg')
+    console.log(getComputedStyle(icon).order);
+    expect(getComputedStyle(icon).order).to.eq('2')
+    vm.$el.remove()
+    vm.$destroy()
+}
+
+{
     const Constructor = Vue.extend(Button)
     const vm = new Constructor({
         propsData: {
@@ -106,9 +97,10 @@ const expect = chai.expect
         }
     })
     vm.$mount()
+    let spy = chai.spy(function() {})
 
-    let spy = chai.spy(function(){})
-    vm.$on('click',spy)
+    vm.$on("click",spy)
+
     let button = vm.$el
     button.click()
     expect(spy).to.have.been.called()

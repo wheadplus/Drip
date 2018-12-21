@@ -1,10 +1,12 @@
 {
   "name": "drip",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "\"Vue UI 框架\"",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx parcel index.html --no-cache",
+    "dev-test": "parcel watch test/* --no-cache & karma start",
+    "test": "parcel build test/* --no-minify && karma start --single-run"
   },
   "keywords": [
     "ui",
@@ -30,6 +32,7 @@
     "vue-template-compiler": "^2.5.21"
   },
   "dependencies": {
+    "icon.vue": "^0.1.5",
     "vue": "^2.5.21",
     "vue-hot-reload-api": "^2.3.1"
   },

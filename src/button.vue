@@ -1,9 +1,9 @@
 <template>
     <button class="d-button" :class="[`icon-${iconPosition}`]"
         @click="$emit('click')">
-        <d-icon class="icon" v-if="icon && !isLoading" :name="icon">
+        <d-icon class="icon" v-if="icon && !loading" :name="icon">
         </d-icon>
-        <d-icon class="loading" v-if="isLoading" name="loading"></d-icon>
+        <d-icon class="loading" v-if="loading" name="loading"></d-icon>
         <div class="content">
             <slot></slot>
         </div>
@@ -14,7 +14,7 @@
     export default {
         props: {
             icon: {},
-            isLoading: {
+            loading: {
                 type: Boolean,
                 default: false
             },
