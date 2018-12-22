@@ -9,6 +9,8 @@ Vue.component("d-input", Input)
 Vue.config.productionTip = false
 Vue.config.devtools = false
 
+//karma 负责 浏览器，配置戳karma.conf.js，mocha 负责 describe 和 it 函数 ，
+// chai 负责 expect 函数， sinon-chai 函数类扩展
 describe('Input', () => {
 
     it('存在.', () => {
