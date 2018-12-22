@@ -23,23 +23,39 @@
         }
         body { font-size: var(--font-size);}
     </style>
+    <style>
+        .box {
+            margin: 20px;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
-        <d-button>默认按钮</d-button>
-        <d-button :loading="true">按钮</d-button>
-        <d-button icon="upload">按钮</d-button>
-        <d-button icon="settings" icon-position="right">
-            设置
-        </d-button>
-        <d-button-group>
-            <d-button icon="left">后退</d-button>
-            <d-button >更多</d-button>
-            <d-button icon="right" icon-position="right">前进</d-button>
-        </d-button-group>
+        <div class="box">
+            <d-input value="刘备"></d-input>
+            <d-input value="关羽" readonly></d-input>
+            <d-input value="张飞" disabled></d-input>
+        </div>
+        <div class="box">
+            <d-input value="诸葛亮" tips></d-input>
+            <d-input value="黄月英" error="姓名不能少于两个字"></d-input>
+        </div>
+        <div class="box">
+            <d-button>默认按钮</d-button>
+            <d-button :loading="true">按钮</d-button>
+            <d-button icon="upload">按钮</d-button>
+            <d-button icon="settings" icon-position="right">
+                设置
+            </d-button>
+            <d-button-group>
+                <d-button icon="left">后退</d-button>
+                <d-button >更多</d-button>
+                <d-button icon="right" icon-position="right">前进</d-button>
+            </d-button-group>
+        </div>
     </div>
 
 <script src="./src/app.js"></script>
-<script src="//at.alicdn.com/t/font_968841_8tu5dlqq7ba.js"></script>
+<script src="//at.alicdn.com/t/font_968841_cnh926cuy4e.js"></script>
 </body>
 </html>
