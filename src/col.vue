@@ -1,6 +1,6 @@
 <template>
-    <div class="col" :class="[span &&`col-${span}`, offset &&`offset-${offset}` ]"
-        :style="{paddingLeft: gutter/2 + 'px', paddingRight: gutter/2 + 'px'}">
+    <div class="col" :class=""
+        :style="colStyle">
         <div style="border: 1px solid blue;">
             <slot></slot>
         </div>
@@ -24,11 +24,21 @@
                 gutter: 0
             }
         },
-        created () {
-            console.log("col created")
-        },
-        mounted () {
-            console.log("col mounted")
+        computed: {
+            colClass(){
+                let {span, offset} = this
+                return [
+                    span && `col-${span}`,
+                    offset && `offset-${offset}`
+                ]
+            },
+
+            colStyle(){
+               return {
+                   paddingLeft: this.gutter / 2 + "px",
+                   paddingRight: this.gutter / 2 + "px"
+               }
+           }
         }
     }
 </script>
