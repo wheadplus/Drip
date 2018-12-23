@@ -1,6 +1,5 @@
 <template>
-    <div class="col" :class=""
-        :style="colStyle">
+    <div class="col" :class="colClass" :style="colStyle">
         <div style="border: 1px solid blue;">
             <slot></slot>
         </div>
@@ -25,20 +24,20 @@
             }
         },
         computed: {
-            colClass(){
+            colClass () {
                 let {span, offset} = this
                 return [
                     span && `col-${span}`,
                     offset && `offset-${offset}`
                 ]
             },
-
-            colStyle(){
-               return {
-                   paddingLeft: this.gutter / 2 + "px",
-                   paddingRight: this.gutter / 2 + "px"
-               }
-           }
+            colStyle () {
+                let {gutter} = this
+                return {
+                    paddingLeft: gutter / 2 + 'px',
+                    paddingRight: gutter / 2 + 'px',
+                }
+            }
         }
     }
 </script>

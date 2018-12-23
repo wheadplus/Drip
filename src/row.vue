@@ -19,6 +19,11 @@
                     marginLeft: -gutter/2 + 'px', marginRight: -gutter/2 + 'px'
                 }
             }
+        },
+        mounted() {
+            this.$children.forEach((vm) => {
+                vm.gutter = this.gutter
+            })
         }
     }
 </script>
