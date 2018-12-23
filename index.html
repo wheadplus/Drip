@@ -26,22 +26,29 @@
     <style>
         .box {
             margin: 20px;
+            vertical-align: middle;
         }
     </style>
 </head>
 <body>
     <div id="app">
         <div class="box">
-            <d-input value="刘备" @change="inputChange"></d-input>
-            <d-input value="关羽" readonly></d-input>
-            <d-input value="张飞" disabled></d-input>
+            <d-input @change="inputChange" value="默认" ></d-input>
+            <d-input value="只读" readonly></d-input>
+            <d-input value="不可选" disabled></d-input>
         </div>
         <div class="box">
-            <d-input value="诸葛亮" tips></d-input>
-            <d-input value="黄月英" error="姓名不能少于两个字"></d-input>
+            <d-input value="成功" tips></d-input>
+            <d-input value="错误" error="姓名不能少于两个字"></d-input>
+        </div>
+
+        <div class="box">
+
+            <d-input v-model="message" ></d-input>
+            <p>{{message}}</p> <button @click="message += '+'">message++</button>
         </div>
         <div class="box">
-            <d-button>默认按钮</d-button>
+            <d-button >默认按钮</d-button>
             <d-button :loading="true">按钮</d-button>
             <d-button icon="upload">按钮</d-button>
             <d-button icon="settings" icon-position="right">
