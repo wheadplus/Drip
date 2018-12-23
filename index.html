@@ -26,12 +26,50 @@
     <style>
         .box {
             margin: 20px;
-            vertical-align: middle;
         }
     </style>
 </head>
 <body>
     <div id="app">
+        <div style="border: 1px solid black;">
+            <d-row gutter="20">
+                <d-col>1</d-col>
+                <d-col>2</d-col>
+            </d-row>
+            <d-row gutter="20">
+                <d-col>1</d-col>
+                <d-col>2</d-col>
+                <d-col>3</d-col>
+            </d-row>
+            <d-row gutter="20">
+                <d-col>1</d-col>
+                <d-col>2</d-col>
+                <d-col>3</d-col>
+                <d-col>4</d-col>
+            </d-row>
+            <d-row gutter="20">
+                <d-col span="2">1</d-col>
+                <d-col span="20" offset="2">11</d-col>
+            </d-row>
+            <d-row gutter="20">
+                <d-col span="4">1</d-col>
+                <d-col span="20">11</d-col>
+            </d-row>
+            <d-row gutter="20">
+                <d-col span="4">1</d-col>
+                <d-col span="18" offset="2">11</d-col>
+            </d-row>
+            <d-row gutter="20">
+                <d-col span="4">1</d-col>
+                <d-col span="8" offset="2">11</d-col>
+                <d-col span="8" offset="2">11</d-col>
+            </d-row>
+            <d-row gutter="20">
+                <d-col span="4">1</d-col>
+                <d-col span="4" offset="6">11</d-col>
+                <d-col span="8" offset="2">11</d-col>
+            </d-row>
+        </div>
         <div class="box">
             <d-input @change="inputChange" value="默认" ></d-input>
             <d-input value="只读" readonly></d-input>

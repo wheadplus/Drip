@@ -32,6 +32,7 @@
     "vue-template-compiler": "^2.5.21"
   },
   "dependencies": {
+    "col": "^0.1.0",
     "icon.vue": "^0.1.5",
     "vue": "^2.5.21",
     "vue-hot-reload-api": "^2.3.1"
