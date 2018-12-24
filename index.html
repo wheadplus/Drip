@@ -32,42 +32,24 @@
 <body>
     <div id="app">
         <div style="border: 1px solid black;">
-            <d-row gutter="20" align="right">
-                <d-col>1</d-col>
-                <d-col>2</d-col>
-            </d-row>
-            <d-row gutter="20" align="center">
-                <d-col>1</d-col>
-                <d-col>2</d-col>
-                <d-col>3</d-col>
-            </d-row>
-            <d-row gutter="20" align="left">
-                <d-col>1</d-col>
-                <d-col>2</d-col>
-                <d-col>3</d-col>
-                <d-col>4</d-col>
-            </d-row>
             <d-row gutter="20">
-                <d-col span="2">1</d-col>
-                <d-col span="20" offset="2">11</d-col>
-            </d-row>
-            <d-row gutter="20">
-                <d-col span="4">1</d-col>
-                <d-col span="20">11</d-col>
-            </d-row>
-            <d-row gutter="20">
-                <d-col span="4">1</d-col>
-                <d-col span="18" offset="2">11</d-col>
-            </d-row>
-            <d-row gutter="20">
-                <d-col span="4">1</d-col>
-                <d-col span="8" offset="2">11</d-col>
-                <d-col span="8" offset="2">11</d-col>
-            </d-row>
-            <d-row gutter="20">
-                <d-col span="4">1</d-col>
-                <d-col span="4" offset="6">11</d-col>
-                <d-col span="8" offset="2">11</d-col>
+                <d-col span="2"
+                       :phone="{span:24}"
+                       :ipad="{span:8}"
+                       :narrow-pc="{span:4}"
+                       :pc="{span:2}"
+                       :wide-pc="{span:1}"
+                >
+                    1
+                </d-col>
+                <d-col span="22"
+                       :phone="{span:24}"
+                       :ipad="{span:16}"
+                       :narrow-pc="{span:20}"
+                       :pc="{span:22}"
+                       :wide-pc="{span:23}"
+                >11
+                </d-col>
             </d-row>
         </div>
         <div class="box">
