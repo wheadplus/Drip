@@ -24,60 +24,41 @@
         body { font-size: var(--font-size);}
     </style>
     <style>
-        .box {
-            margin: 20px;
+        .demo {
+            background-color: #777777;
+            border: 1px solid darkblue;
+            height: 49px;
         }
     </style>
 </head>
 <body>
     <div id="app">
-        <div style="border: 1px solid black;">
-            <d-row gutter="20">
-                <d-col span="24"
-                       :ipad="{span:8}"
-                       :narrow-pc="{span:4}"
-                       :pc="{span:2}"
-                       :wide-pc="{span:1}"
-                >
-                    1
-                </d-col>
-                <d-col span="24"
-                       :ipad="{span:16}"
-                       :narrow-pc="{span:20}"
-                       :pc="{span:22}"
-                       :wide-pc="{span:23}"
-                >11
-                </d-col>
-            </d-row>
-        </div>
-        <div class="box">
-            <d-input @change="inputChange" value="默认" ></d-input>
-            <d-input value="只读" readonly></d-input>
-            <d-input value="不可选" disabled></d-input>
-        </div>
-        <div class="box">
-            <d-input value="成功" tips></d-input>
-            <d-input value="错误" error="姓名不能少于两个字"></d-input>
-        </div>
+        <d-row>
+            <d-col span="24"  :narrow-pc="{span:8}" >
+                <div class="demo"></div>
+            </d-col>
+            <d-col span="24"  :narrow-pc="{span:8}" >
+                <div class="demo"></div>
+            </d-col>
+            <d-col span="24"  :narrow-pc="{span:8}" >
+                <div class="demo"></div>
+            </d-col>
+            <d-col span="24"  :narrow-pc="{span:8}" >
+                <div class="demo"></div>
+            </d-col>
+            <d-col span="24"  :narrow-pc="{span:8}" >
+                <div class="demo"></div>
+            </d-col>
+            <d-col span="24"  :narrow-pc="{span:8}" >
+                <div class="demo"></div>
+            </d-col>
+        </d-row>
 
-        <div class="box">
-
-            <d-input v-model="message" ></d-input>
-            <p>{{message}}</p> <button @click="message += '+'">message++</button>
-        </div>
-        <div class="box">
-            <d-button >默认按钮</d-button>
-            <d-button :loading="true">按钮</d-button>
-            <d-button icon="upload">按钮</d-button>
-            <d-button icon="settings" icon-position="right">
-                设置
-            </d-button>
-            <d-button-group>
-                <d-button icon="left">后退</d-button>
-                <d-button >更多</d-button>
-                <d-button icon="right" icon-position="right">前进</d-button>
-            </d-button-group>
-        </div>
+        <!--<d-row>-->
+            <!--<d-col span="24" :ipad="{span:12}" :narrow-pc="{span:8}">-->
+                <!--<div class="demo"></div>-->
+            <!--</d-col>-->
+        <!--</d-row>-->
     </div>
 
 <script src="./src/app.js"></script>

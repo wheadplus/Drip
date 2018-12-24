@@ -34,8 +34,9 @@
                     //等价于 if(span) { return `col-${span}`}
                     span && `col-${span}`,
                     offset && `offset-${offset}`,
+
                     ...(ipad ? [`col-ipad-${ipad.span}`] : []),
-                    ...(narrowPc ? [`col-narrowPc-${pc.span}`] : []),
+                    ...(narrowPc ? [`col-narrowPc-${narrowPc.span}`] : []),
                     ...(pc ? [`col-pc-${pc.span}`] : []),
                     ...(widePc ? [`col-widePc-${widePc.span}`] : [])
                 ]
@@ -67,7 +68,7 @@
             }
         }
 
-        @media (min-width: 577px) and (max-width: 768px) {
+        @media (min-width: 577px)  {
             $class-prefix: col-ipad-;
             @for $n from 1 through 24 {
                 &.#{$class-prefix}#{$n} {
@@ -82,7 +83,7 @@
                 }
             }
         }
-        @media (min-width: 769px) and (max-width: 992px) {
+        @media (min-width: 769px)  {
             $class-prefix: col-narrowPc-;
             @for $n from 1 through 24 {
                 &.#{$class-prefix}#{$n} {
@@ -97,7 +98,7 @@
                 }
             }
         }
-        @media(min-width: 993px) and  (max-width: 1200px) {
+        @media(min-width: 993px)  {
             $class-prefix: col-pc-;
             @for $n from 1 through 24 {
                 &.#{$class-prefix}#{$n} {
