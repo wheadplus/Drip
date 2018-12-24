@@ -26,19 +26,25 @@
             widePc: {type : Object, validator,}
         },
         data () {return {gutter: 0}},
+        methods: {
+            createClasses (obj, str=""){
+                if(!obj) {return []}
+                let array = []
+                if(obj.span) {array.push(`col-${str}${obj.span}`)}
+                if(obj.offset) {array.push(`offset-${str}${obj.offset}`)}
+                return array
+            }
+        },
         computed: {
             colClass () {
                 let {span, offset, ipad, narrowPc, pc, widePc } = this
-
+                let createClasses = this.createClasses
                 return [
-                    //等价于 if(span) { return `col-${span}`}
-                    span && `col-${span}`,
-                    offset && `offset-${offset}`,
-
-                    ...(ipad ? [`col-ipad-${ipad.span}`] : []),
-                    ...(narrowPc ? [`col-narrowPc-${narrowPc.span}`] : []),
-                    ...(pc ? [`col-pc-${pc.span}`] : []),
-                    ...(widePc ? [`col-widePc-${widePc.span}`] : [])
+                    ...createClasses({span, offset}),
+                    ...createClasses(ipad, 'ipad-'),
+                    ...createClasses(narrowPc, 'narrowPc-'),
+                    ...createClasses(pc, 'pc-'),
+                    ...createClasses(widePc, 'widePc-'),
                 ]
             },
             colStyle () {

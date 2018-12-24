@@ -8,9 +8,7 @@
     export default {
         name: "d-row",
         props: {
-            gutter: {
-                type: [Number, String]
-            },
+            gutter: {type: [Number, String] },
             align: {
                 type: String,
                 validator (value) {
@@ -31,6 +29,7 @@
             }
         },
         mounted() {
+            // 把 gutter 传给 col
             this.$children.forEach((vm) => {
                 vm.gutter = this.gutter
             })
@@ -42,15 +41,9 @@
     .row {
         display: flex;
         flex-wrap: wrap;
-        &.align-left {
-            justify-content: flex-start;
-        }
-        &.align-right {
-            justify-content: flex-end;
-        }
-        &.align-center {
-            justify-content: center;
-        }
+        &.align-left { justify-content: flex-start; }
+        &.align-right { justify-content: flex-end; }
+        &.align-center { justify-content: center; }
     }
 
 </style>

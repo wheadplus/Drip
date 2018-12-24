@@ -9,56 +9,24 @@
         *{  margin: 0;  padding: 0;  box-sizing: border-box;  }
     
         :root {
-            --button-height: 32px;
-            --font-size: 14px;
-            --button-bg: white;
-            --button-active-bg: #eee;
-            --border-radius: 4px;
-            --color: #333;
-            --border-color: #999;
-            --border-color-hover: #666;
-        }
-        #app {
-            margin: 20px;
-        }
+            --button-height: 32px; --font-size: 14px; --button-bg: white;
+            --button-active-bg: #eee; --border-radius: 4px; --color: #333;
+            --border-color: #999; --border-color-hover: #666; }
+        #app { margin: 20px; }
         body { font-size: var(--font-size);}
     </style>
     <style>
         .demo {
-            background-color: #777777;
-            border: 1px solid darkblue;
-            height: 49px;
-        }
+            background-color: #777777; border: 1px solid darkblue; height: 49px; }
     </style>
 </head>
 <body>
     <div id="app">
         <d-row>
-            <d-col span="24"  :narrow-pc="{span:8}" >
-                <div class="demo"></div>
-            </d-col>
-            <d-col span="24"  :narrow-pc="{span:8}" >
-                <div class="demo"></div>
-            </d-col>
-            <d-col span="24"  :narrow-pc="{span:8}" >
-                <div class="demo"></div>
-            </d-col>
-            <d-col span="24"  :narrow-pc="{span:8}" >
-                <div class="demo"></div>
-            </d-col>
-            <d-col span="24"  :narrow-pc="{span:8}" >
-                <div class="demo"></div>
-            </d-col>
-            <d-col span="24"  :narrow-pc="{span:8}" >
+            <d-col span="23" offset="1" :narrow-pc="{span:12, offset:12}" >
                 <div class="demo"></div>
             </d-col>
         </d-row>
-
-        <!--<d-row>-->
-            <!--<d-col span="24" :ipad="{span:12}" :narrow-pc="{span:8}">-->
-                <!--<div class="demo"></div>-->
-            <!--</d-col>-->
-        <!--</d-row>-->
     </div>
 
 <script src="./src/app.js"></script>
