@@ -12,21 +12,26 @@
             --button-height: 32px; --font-size: 14px; --button-bg: white;
             --button-active-bg: #eee; --border-radius: 4px; --color: #333;
             --border-color: #999; --border-color-hover: #666; }
-        #app { margin: 20px; }
+        #app { }
         body { font-size: var(--font-size);}
     </style>
     <style>
         .demo {
-            background-color: #777777; border: 1px solid darkblue; height: 49px; }
+             border: 1px solid darkblue; min-height: 100px; }
     </style>
 </head>
 <body>
     <div id="app">
-        <d-row>
-            <d-col span="23" offset="1" :narrow-pc="{span:12, offset:12}" >
-                <div class="demo"></div>
-            </d-col>
-        </d-row>
+        <d-layout style="height: 100vh;">
+            <d-sider class="demo">sider</d-sider>
+
+            <d-layout>
+                <d-header class="demo">header</d-header>
+                <d-content class="demo">content</d-content>
+                <d-footer class="demo">footer</d-footer>
+            </d-layout>
+
+        </d-layout>
     </div>
 
 <script src="./src/app.js"></script>
