@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7acf5c9c-6922-4c92-b203-23cda78f569e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/drip-demo.iml" afterPath="$PROJECT_DIR$/.idea/drip-demo.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/footer.vue" afterPath="$PROJECT_DIR$/src/footer.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/header.vue" afterPath="$PROJECT_DIR$/src/header.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/layout.vue" afterPath="$PROJECT_DIR$/src/layout.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sider.vue" afterPath="$PROJECT_DIR$/src/sider.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -66,11 +63,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sider.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sider.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sider.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="17" column="10" lean-forward="false" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+            <state relative-caret-position="420">
+              <caret line="21" column="26" lean-forward="true" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -132,6 +139,7 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/src/layout.vue" />
         <option value="$PROJECT_DIR$/src/sider.vue" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -154,8 +162,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="452" />
-    <option name="y" value="127" />
+    <option name="x" value="634" />
+    <option name="y" value="123" />
     <option name="width" value="1126" />
     <option name="height" value="1037" />
   </component>
@@ -252,7 +260,7 @@
       <workItem from="1545051898881" duration="4521000" />
       <workItem from="1545090687345" duration="21864000" />
       <workItem from="1545353456269" duration="28108000" />
-      <workItem from="1545548972287" duration="38497000" />
+      <workItem from="1545548972287" duration="39403000" />
     </task>
     <task id="LOCAL-00001" summary="props 验证 iconPosition left or right">
       <created>1545052214343</created>
@@ -457,7 +465,14 @@
       <option name="project" value="LOCAL" />
       <updated>1545722802189</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="添加侧边栏滑动关闭的功能">
+      <created>1545724469795</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1545724469796</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -466,10 +481,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94532000" />
+    <option name="totallyTimeSpent" value="95438000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="452" y="127" width="1126" height="1037" extended-state="0" />
+    <frame x="634" y="123" width="1126" height="1037" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24955595" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -498,7 +513,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="检测d-button-group的子元素是否为d-button。" />
     <MESSAGE value="注释console的数据" />
     <MESSAGE value="修改第一个元素 marin-left:-1px的情况" />
     <MESSAGE value="使用chai.expect 添加四个测试用例" />
@@ -523,7 +537,8 @@
     <MESSAGE value="添加 row 测试用例，异步操作需要加done，computed属性变化需挂载后才能获取到" />
     <MESSAGE value="添加 col 测试用例" />
     <MESSAGE value="添加 layout相关组件，完成基本功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加 layout相关组件，完成基本功能" />
+    <MESSAGE value="添加侧边栏滑动关闭的功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加侧边栏滑动关闭的功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -760,8 +775,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sider.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="17" column="10" lean-forward="false" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+        <state relative-caret-position="420">
+          <caret line="21" column="26" lean-forward="true" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
           <folding />
         </state>
       </provider>
