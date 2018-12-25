@@ -15,13 +15,11 @@
           }
         },
         mounted() {
-            console.log(this.$children);
                 this.$children.forEach((vm) => {
                     if(vm.$options.name ==='drip-sider') {
                         this.layoutClass.hasSider = true
                     }
                 })
-
         }
     }
 </script>
@@ -31,10 +29,8 @@
         display: flex;
         flex-grow: 1;
         flex-direction: column;
-
         &.hasSider {
             flex-direction: row;
-
         }
     }
 </style>
