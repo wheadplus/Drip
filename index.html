@@ -15,25 +15,11 @@
         #app { }
         body { font-size: var(--font-size);}
     </style>
-    <style>
-        .sider { background: #FFFFCB; width: 150px; }
-        .sider.slide-enter, .sider.slide-leave-to { margin-left: -150px; }
-        .header { background: #C9FFD5; height: 100px; }
-        .footer { background: #74CEB7; height: 50px; }
-    </style>
+
 </head>
 <body>
     <div id="app">
-        <d-layout style="height: 100vh;">
-            <d-sider>sider</d-sider>
-
-            <d-layout>
-                <d-header>header</d-header>
-                <d-content>content</d-content>
-                <d-footer>footer</d-footer>
-            </d-layout>
-
-        </d-layout>
+        <button @click="showToast">dianwo</button>
     </div>
 
 <script src="./src/app.js"></script>
