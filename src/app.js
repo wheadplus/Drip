@@ -41,7 +41,13 @@ new Vue({
             console.log(e)
         },
         showToast() {
-          this.$toast('智商不足，请充值')
+          this.$toast('我是谁', {
+              closeButton: {
+                  text: '知道了',
+                  callback(toast){
+                      console.log("用户知道啦")
+                  }}
+          })
         }
     }
 })
