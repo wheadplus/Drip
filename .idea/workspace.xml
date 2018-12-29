@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7acf5c9c-6922-4c92-b203-23cda78f569e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/toast.test.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app.js" afterPath="$PROJECT_DIR$/src/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/toast.vue" afterPath="$PROJECT_DIR$/src/toast.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/toast.test.js" afterPath="$PROJECT_DIR$/test/toast.test.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,21 +20,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="toast.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="toast.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/toast.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1140">
-              <caret line="57" column="14" lean-forward="false" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
+            <state relative-caret-position="430">
+              <caret line="65" column="33" lean-forward="true" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="toast.test.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="toast.test.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/toast.test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="39" column="21" lean-forward="true" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+            <state relative-caret-position="512">
+              <caret line="49" column="18" lean-forward="false" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
               <folding>
                 <element signature="e#28#49#0" expanded="true" />
               </folding>
@@ -98,6 +96,7 @@
       <find>wra</find>
       <find>autoCloseDelay</find>
       <find>updateLineHeight</find>
+      <find>next</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -253,7 +252,7 @@
       <workItem from="1545353456269" duration="28108000" />
       <workItem from="1545548972287" duration="54085000" />
       <workItem from="1546001509770" duration="5716000" />
-      <workItem from="1546050112119" duration="7295000" />
+      <workItem from="1546050112119" duration="8020000" />
     </task>
     <task id="LOCAL-00001" summary="props 验证 iconPosition left or right">
       <created>1545052214343</created>
@@ -514,7 +513,14 @@
       <option name="project" value="LOCAL" />
       <updated>1546068206374</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="完成测试用例，将autoClose和autoCloseDelay合并，发现vue-warn提示的bug">
+      <created>1546073078135</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1546073078135</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -523,7 +529,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123131000" />
+    <option name="totallyTimeSpent" value="123856000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="770" y="0" width="1411" height="1037" extended-state="0" />
@@ -555,7 +561,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="完成单元测试" />
     <MESSAGE value="介入 travis ci" />
     <MESSAGE value="完成 input 样式" />
     <MESSAGE value="完成 input 的测试" />
@@ -580,7 +585,8 @@
     <MESSAGE value="实现 position : top/middle/bottom 功能" />
     <MESSAGE value="实现 只能有一个 toast 出现" />
     <MESSAGE value="优化css样式，transform被覆盖的bug，外层添加wrapper控制居中即tranform避免覆盖。" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化css样式，transform被覆盖的bug，外层添加wrapper控制居中即tranform避免覆盖。" />
+    <MESSAGE value="完成测试用例，将autoClose和autoCloseDelay合并，发现vue-warn提示的bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成测试用例，将autoClose和autoCloseDelay合并，发现vue-warn提示的bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -753,6 +759,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -886,21 +893,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/toast.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="57" column="14" lean-forward="false" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/toast.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="39" column="21" lean-forward="true" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+        <state relative-caret-position="512">
+          <caret line="49" column="18" lean-forward="false" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
           <folding>
             <element signature="e#28#49#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/toast.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="65" column="33" lean-forward="true" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
