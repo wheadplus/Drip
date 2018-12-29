@@ -1,3 +1,4 @@
+import Toast from './toast.vue'
 
 /*  1 使用 plugin.install,Vue.use(plugin)代替下面注释代码，
     因为Vue是用户给的值，可能是vue2我们不定义。
@@ -9,17 +10,24 @@
 *    2.动态创建组件
 *
 * */
-import Toast from './toast.vue'
+
+let currentToast
+
 export default  {
-    install(Vue, options) {
+install(Vue, options) {
         Vue.prototype.$toast = function (message, toastOptions) {
-            let Constructor = Vue.extend(Toast)
-            let toast = new Constructor({
-                propsData:  toastOptions
-            })
-            toast.$slots.default = [message]
-            toast.$mount()
-            document.body.appendChild(toast.$el)
+            if(currentToast) { currentToast.close() }
+            currentToast = createToast({Vue, message, propsData: toastOptions})
         }
+
     }
+}
+
+function createToast({Vue,message, propsData}) {
+    let Constructor = Vue.extend(Toast)
+    let toast = new Constructor({ propsData })
+    toast.$slots.default = [message]
+    toast.$mount()
+    document.body.appendChild(toast.$el)
+    return toast
 }

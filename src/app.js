@@ -41,7 +41,7 @@ new Vue({
             console.log(e)
         },
         showToast() {
-          this.$toast('我是谁', {
+          this.$toast(`你的智商目前为${parseInt(Math.random()*100)},请充值`, {
               position: 'middle',
               autoClose: false,
               autoCloseDelay: 300,
