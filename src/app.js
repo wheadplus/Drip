@@ -42,11 +42,15 @@ new Vue({
         },
         showToast() {
           this.$toast('我是谁', {
+              position: 'middle',
+              autoClose: false,
+              autoCloseDelay: 300,
               closeButton: {
                   text: '知道了',
                   callback(toast){
                       console.log("用户知道啦")
-                  }}
+                  }
+              }
           })
         }
     }
