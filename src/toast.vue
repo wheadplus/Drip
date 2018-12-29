@@ -17,8 +17,13 @@
     export default  {
         name: "drip-toast",
         props: {
-            autoClose: {type: false, default: true},
-            autoCloseDelay: {type: Number, default: 500},
+            autoClose: {
+                type: [Boolean, Number],
+                default: 4 ,
+                validator: function (value) {
+                    return value === false || typeof value === 'number';
+                }
+            },
             closeButton: {
                 type: Object,
                 default () {
@@ -42,14 +47,13 @@
         mounted() {
             this.exeAutoClose()
             this.updateLineHeight()
-            console.log(this.position , 'here')
         },
         methods: {
             exeAutoClose() {
                 if(this.autoClose) {
                     setTimeout(() => {
                         this.close()
-                    }, this.autoCloseDelay * 1000)
+                    }, this.autoClose * 1000)
                 }
             },
             updateLineHeight() {
