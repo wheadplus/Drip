@@ -32,8 +32,8 @@
             }
         },
         created() {
-            //this.emit(update:selected)
-        }
+
+        },
     }
 </script>
 

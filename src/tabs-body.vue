@@ -6,7 +6,11 @@
 
 <script>
     export default {
-        name: "drip-tabsBody"
+        name: "drip-tabsBody",
+        inject: ['eventBus'],
+        created() {
+
+        },
     }
 </script>
 

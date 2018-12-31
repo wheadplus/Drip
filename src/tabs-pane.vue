@@ -6,7 +6,13 @@
 
 <script>
     export default {
-        name: "drip-tabsPane"
+        name: "drip-tabsPane",
+        inject: ['eventBus'],
+        created() {
+            this.eventBus.$on('update:selected',(name) => {
+                console.log(name)
+            })
+        },
     }
 </script>
 
