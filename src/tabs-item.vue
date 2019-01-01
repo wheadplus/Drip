@@ -37,7 +37,7 @@
         },
         methods: {
             xxx() {
-                this.eventBus.$emit('update:selected', this.name)
+                this.eventBus.$emit('update:selected', this.name, this)
             }
         }
     }
@@ -50,11 +50,11 @@
         height: 100%;
         display: flex;
         align-items: center;
-        border: 1px solid green;
+
 
         &.active {
             color: $active-text-color;
-            background-color: red;
+            font-weight: bold;
         }
     }
 </style>

@@ -32,8 +32,20 @@
             }
         },
         mounted() {
-//            this.$emit('update:selected','这厮 this emit 触发的数据')
-            this.eventBus.$emit('update:selected',this.selected)
+
+            this.$children.forEach((vm) => {
+                //console.log(vm.$options.name)
+                if(vm.$options.name === 'drip-tabsHead') {
+                    vm.$children.forEach((childVm) => {
+                        //console.log(item.$options.name);
+                        if(childVm.$options.name === 'drip-tabsItem'
+                            && childVm.name === this.selected) {
+
+                            this.eventBus.$emit('update:selected',this.selected, childVm)
+                        }
+                    })
+                }
+            })
         },
     }
 </script>
