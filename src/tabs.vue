@@ -31,8 +31,9 @@
                 eventBus: this.eventBus
             }
         },
-        created() {
-
+        mounted() {
+//            this.$emit('update:selected','这厮 this emit 触发的数据')
+            this.eventBus.$emit('update:selected',this.selected)
         },
     }
 </script>

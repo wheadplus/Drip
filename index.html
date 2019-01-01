@@ -19,7 +19,7 @@
 </head>
 <body>
     <div id="app">
-        <d-tabs :selected.sync="selectedTab">
+        <d-tabs :selected.sync="selectedTab" @update:selected="yyy">
             <d-tabs-head class="jimmy">
                 <d-tabs-item name="woman">
                     <d-icon name="like"></d-icon>美女
