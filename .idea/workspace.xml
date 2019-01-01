@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7acf5c9c-6922-4c92-b203-23cda78f569e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app.js" afterPath="$PROJECT_DIR$/src/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tabs-head.vue" afterPath="$PROJECT_DIR$/src/tabs-head.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tabs-item.vue" afterPath="$PROJECT_DIR$/src/tabs-item.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tabs-pane.vue" afterPath="$PROJECT_DIR$/src/tabs-pane.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tabs.vue" afterPath="$PROJECT_DIR$/src/tabs.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -50,7 +45,7 @@
       <file leaf-file-name="tabs.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tabs.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
+            <state relative-caret-position="792">
               <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding />
             </state>
@@ -67,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tabs-item.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="tabs-item.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/tabs-item.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+            <state relative-caret-position="232">
+              <caret line="24" column="19" lean-forward="true" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -87,7 +82,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tabs-pane.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tabs-pane.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tabs-pane.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="640">
@@ -147,9 +142,9 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/src/app.js" />
         <option value="$PROJECT_DIR$/src/tabs-head.vue" />
-        <option value="$PROJECT_DIR$/src/tabs-item.vue" />
-        <option value="$PROJECT_DIR$/src/tabs.vue" />
         <option value="$PROJECT_DIR$/src/tabs-pane.vue" />
+        <option value="$PROJECT_DIR$/src/tabs.vue" />
+        <option value="$PROJECT_DIR$/src/tabs-item.vue" />
       </list>
     </option>
   </component>
@@ -272,7 +267,7 @@
       <workItem from="1545353456269" duration="28108000" />
       <workItem from="1545548972287" duration="54085000" />
       <workItem from="1546001509770" duration="5716000" />
-      <workItem from="1546050112119" duration="19817000" />
+      <workItem from="1546050112119" duration="20019000" />
     </task>
     <task id="LOCAL-00001" summary="props 验证 iconPosition left or right">
       <created>1545052214343</created>
@@ -568,7 +563,14 @@
       <option name="project" value="LOCAL" />
       <updated>1546222337294</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="tabs 可以切换">
+      <created>1546310329354</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1546310329354</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -577,7 +579,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135653000" />
+    <option name="totallyTimeSpent" value="135855000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="866" y="45" width="1411" height="1037" extended-state="0" />
@@ -609,7 +611,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="重构 col 和 row，将一眼看不出的 style 提取为computed" />
     <MESSAGE value="发现样式错误，复原误删的mounted代码" />
     <MESSAGE value="给 row 添加 align left/center/right" />
     <MESSAGE value="初步完成响应式" />
@@ -634,7 +635,8 @@
     <MESSAGE value="添加 tabs 5个组件" />
     <MESSAGE value="添加 tabs 5个组件， 添加基本 props" />
     <MESSAGE value="添加 eventBus 监听 select 事件" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加 eventBus 监听 select 事件" />
+    <MESSAGE value="tabs 可以切换" />
+    <option name="LAST_COMMIT_MESSAGE" value="tabs 可以切换" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -959,10 +961,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/tabs-pane.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="32" column="10" lean-forward="true" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/tabs-body.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tabs.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -975,26 +993,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tabs.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tabs-item.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tabs-pane.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="32" column="10" lean-forward="true" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+        <state relative-caret-position="232">
+          <caret line="24" column="19" lean-forward="true" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
           <folding />
         </state>
       </provider>

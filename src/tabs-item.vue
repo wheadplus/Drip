@@ -47,8 +47,14 @@
     $active-text-color: #4A90E2;
     .tabs-item {
         padding: 0 1em;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        border: 1px solid green;
+
         &.active {
             color: $active-text-color;
+            background-color: red;
         }
     }
 </style>
