@@ -32,15 +32,14 @@
             }
         },
         mounted() {
-
+            if(this.$children.length === 0) {
+                console && console.warn && console.warn("tabs的子组件应该是 tabs-head 和 tabs-body")
+            }
             this.$children.forEach((vm) => {
-                //console.log(vm.$options.name)
                 if(vm.$options.name === 'drip-tabsHead') {
                     vm.$children.forEach((childVm) => {
-                        //console.log(item.$options.name);
                         if(childVm.$options.name === 'drip-tabsItem'
                             && childVm.name === this.selected) {
-
                             this.eventBus.$emit('update:selected',this.selected, childVm)
                         }
                     })
