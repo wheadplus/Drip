@@ -18,28 +18,19 @@
 
 </head>
 <body>
-    <div id="app">
-        <d-tabs>
-            <div>hi</div>
-        </d-tabs>
-        <d-tabs :selected.sync="selectedTab" @update:selected="yyy">
-            <d-tabs-head class="jimmy">
-                <d-tabs-item name="woman">
-                    <d-icon name="like"></d-icon>美女
-                </d-tabs-item>
-                <d-tabs-item name="finance" disabled>财经</d-tabs-item>
-                <d-tabs-item name="sports">体育</d-tabs-item>
-                <template slot="actions">
-                    <d-button>设置</d-button>
-                </template>
-            </d-tabs-head>
-            <d-tabs-body>
-                <d-tabs-pane name="woman">美女资讯</d-tabs-pane>
-                <d-tabs-pane name="finance">财经资讯</d-tabs-pane>
-                <d-tabs-pane name="sports">体育资讯</d-tabs-pane>
-            </d-tabs-body>
-        </d-tabs>
-
+    <div id="app" style="padding: 200px;">
+        <d-popover>
+            <template slot="content">
+                <div>内容</div>
+            </template>
+            <button>点我</button>
+        </d-popover>
+        <d-popover>
+            <template slot="content">
+                <div>看见我</div>
+            </template>
+            <button>点我</button>
+        </d-popover>
     </div>
 
 <script src="./src/app.js"></script>
