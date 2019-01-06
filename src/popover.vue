@@ -24,9 +24,10 @@
                         document.body.appendChild(this.$refs.contentWrapper)
                         console.log('添加监听器');
                         let {width, height, top, left} = this.$refs.triggerWrapper.getBoundingClientRect()
-                        console.log(width, height, top, left)
-                        this.$refs.contentWrapper.style.left = left + 'px'
-                        this.$refs.contentWrapper.style.top = top + 'px'
+                        console.log(top, left)
+                        console.log(window.scrollX,window.scrollY);
+                        this.$refs.contentWrapper.style.left = left + window.scrollX + 'px'
+                        this.$refs.contentWrapper.style.top = top + window.scrollY + 'px'
                         let x = () => {
                             this.visible = false
                             document.removeEventListener('click', x)

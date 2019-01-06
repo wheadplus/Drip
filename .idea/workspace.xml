@@ -47,8 +47,8 @@
       <file leaf-file-name="popover.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/popover.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="40" column="10" lean-forward="true" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
+            <state relative-caret-position="378">
+              <caret line="44" column="36" lean-forward="true" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -135,8 +135,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="739" />
-    <option name="y" value="54" />
+    <option name="x" value="817" />
+    <option name="y" value="119" />
     <option name="width" value="1411" />
     <option name="height" value="1037" />
   </component>
@@ -239,14 +239,7 @@
       <workItem from="1545548972287" duration="54085000" />
       <workItem from="1546001509770" duration="5716000" />
       <workItem from="1546050112119" duration="27298000" />
-      <workItem from="1546392572656" duration="11021000" />
-    </task>
-    <task id="LOCAL-00001" summary="props 验证 iconPosition left or right">
-      <created>1545052214343</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1545052214343</updated>
+      <workItem from="1546392572656" duration="12528000" />
     </task>
     <task id="LOCAL-00002" summary="添加loading状态">
       <created>1545089037186</created>
@@ -584,7 +577,14 @@
       <option name="project" value="LOCAL" />
       <updated>1546736452611</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="移动content，获取trigger位置，修改content位置">
+      <created>1546739235268</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1546739235270</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -593,13 +593,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154155000" />
+    <option name="totallyTimeSpent" value="155662000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="739" y="54" width="1411" height="1037" extended-state="0" />
+    <frame x="817" y="119" width="1411" height="1037" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19914953" sideWeight="0.49566162" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19914953" sideWeight="0.49566162" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -625,7 +625,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="添加 row 测试用例，异步操作需要加done，computed属性变化需挂载后才能获取到" />
     <MESSAGE value="添加 col 测试用例" />
     <MESSAGE value="添加 layout相关组件，完成基本功能" />
     <MESSAGE value="添加侧边栏滑动关闭的功能" />
@@ -650,7 +649,8 @@
     <MESSAGE value="支持 disabled" />
     <MESSAGE value="添加 部分 测试用例" />
     <MESSAGE value="添加 popover 组件" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加 popover 组件" />
+    <MESSAGE value="移动content，获取trigger位置，修改content位置" />
+    <option name="LAST_COMMIT_MESSAGE" value="移动content，获取trigger位置，修改content位置" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1074,8 +1074,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/popover.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="40" column="10" lean-forward="true" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
+        <state relative-caret-position="378">
+          <caret line="44" column="36" lean-forward="true" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
           <folding />
         </state>
       </provider>
