@@ -47,8 +47,8 @@
       <file leaf-file-name="popover.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/popover.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="44" column="36" lean-forward="true" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
+            <state relative-caret-position="360">
+              <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -68,6 +68,7 @@
       <find>next</find>
       <find>tabs</find>
       <find>conso</find>
+      <find>onshow</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -239,14 +240,7 @@
       <workItem from="1545548972287" duration="54085000" />
       <workItem from="1546001509770" duration="5716000" />
       <workItem from="1546050112119" duration="27298000" />
-      <workItem from="1546392572656" duration="12528000" />
-    </task>
-    <task id="LOCAL-00002" summary="添加loading状态">
-      <created>1545089037186</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1545089037186</updated>
+      <workItem from="1546392572656" duration="15827000" />
     </task>
     <task id="LOCAL-00003" summary="添加click时间，$emit(&quot;click&quot;)为methods函数缩写">
       <created>1545090260387</created>
@@ -584,7 +578,14 @@
       <option name="project" value="LOCAL" />
       <updated>1546739235270</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="解决外层div overflow hidden 造成的 bug">
+      <created>1546741812261</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1546741812261</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -593,7 +594,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155662000" />
+    <option name="totallyTimeSpent" value="158961000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="817" y="119" width="1411" height="1037" extended-state="0" />
@@ -625,7 +626,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="添加 col 测试用例" />
     <MESSAGE value="添加 layout相关组件，完成基本功能" />
     <MESSAGE value="添加侧边栏滑动关闭的功能" />
     <MESSAGE value="忽略 .idea/" />
@@ -650,7 +650,8 @@
     <MESSAGE value="添加 部分 测试用例" />
     <MESSAGE value="添加 popover 组件" />
     <MESSAGE value="移动content，获取trigger位置，修改content位置" />
-    <option name="LAST_COMMIT_MESSAGE" value="移动content，获取trigger位置，修改content位置" />
+    <MESSAGE value="解决外层div overflow hidden 造成的 bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="解决外层div overflow hidden 造成的 bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1074,8 +1075,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/popover.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="44" column="36" lean-forward="true" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
+        <state relative-caret-position="360">
+          <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
           <folding />
         </state>
       </provider>
