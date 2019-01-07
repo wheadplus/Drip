@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7acf5c9c-6922-4c92-b203-23cda78f569e" name="Default" comment="">
+    <list default="true" id="7acf5c9c-6922-4c92-b203-23cda78f569e" name="Default" comment="trigger测试用例 不知如何触发hover事件">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/tabs-item.test.js" afterPath="$PROJECT_DIR$/test/tabs-item.test.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -49,12 +48,14 @@
       <file leaf-file-name="popover.test.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/popover.test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+            <state relative-caret-position="632">
+              <caret line="55" column="28" lean-forward="true" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
               <folding>
                 <element signature="e#28#49#0" expanded="true" />
-                <marker date="1546865721176" expanded="true" signature="471:575" ph="..." />
-                <marker date="1546865721176" expanded="true" signature="503:532" ph="..." />
+                <marker date="1546866720141" expanded="true" signature="475:599" ph="..." />
+                <marker date="1546866720141" expanded="true" signature="511:548" ph="..." />
+                <marker date="1546866720141" expanded="true" signature="1114:1238" ph="..." />
+                <marker date="1546866720141" expanded="true" signature="1150:1187" ph="..." />
               </folding>
             </state>
           </provider>
@@ -272,14 +273,7 @@
       <workItem from="1546001509770" duration="5716000" />
       <workItem from="1546050112119" duration="27298000" />
       <workItem from="1546392572656" duration="35887000" />
-      <workItem from="1546865462849" duration="271000" />
-    </task>
-    <task id="LOCAL-00010" summary="添加karma配置">
-      <created>1545228801788</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1545228801788</updated>
+      <workItem from="1546865462849" duration="1287000" />
     </task>
     <task id="LOCAL-00011" summary="测试代码发现bug">
       <created>1545396044443</created>
@@ -617,7 +611,14 @@
       <option name="project" value="LOCAL" />
       <updated>1546841520643</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="添加测试用例 1">
+      <created>1546865747543</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1546865747543</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -626,7 +627,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="179292000" />
+    <option name="totallyTimeSpent" value="180308000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="609" y="0" width="1411" height="1037" extended-state="0" />
@@ -659,7 +660,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="优化css样式，transform被覆盖的bug，外层添加wrapper控制居中即tranform避免覆盖。" />
     <MESSAGE value="完成测试用例，将autoClose和autoCloseDelay合并，发现vue-warn提示的bug" />
     <MESSAGE value="模拟click事件太快导致 nextTick异步操作还没成功就把 toast删掉了。setTimeout异步点击按钮修复bug" />
     <MESSAGE value="添加tabs 5个组件，.sync" />
@@ -684,7 +684,8 @@
     <MESSAGE value="表驱动编程重构代码，即用对象代替冗余的if else" />
     <MESSAGE value="解决抖动bug，抖动是border造成的。" />
     <MESSAGE value="添加插槽的 close API" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加插槽的 close API" />
+    <MESSAGE value="添加测试用例 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加测试用例 1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1022,6 +1023,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1064,12 +1066,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/popover.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        <state relative-caret-position="632">
+          <caret line="55" column="28" lean-forward="true" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
           <folding>
             <element signature="e#28#49#0" expanded="true" />
-            <marker date="1546865721176" expanded="true" signature="471:575" ph="..." />
-            <marker date="1546865721176" expanded="true" signature="503:532" ph="..." />
+            <marker date="1546866720141" expanded="true" signature="475:599" ph="..." />
+            <marker date="1546866720141" expanded="true" signature="511:548" ph="..." />
+            <marker date="1546866720141" expanded="true" signature="1114:1238" ph="..." />
+            <marker date="1546866720141" expanded="true" signature="1150:1187" ph="..." />
           </folding>
         </state>
       </provider>
