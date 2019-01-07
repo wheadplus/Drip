@@ -21,7 +21,27 @@
               validator (value) {
                   return ['top', 'bottom', 'right', 'left'].indexOf(value) >= 0
               }
+          },
+          trigger: {
+              type: String,
+              default: 'click',
+              validator (value) {
+                  return ['click', 'hover'].indexOf(value) >= 0
+              }
           }
+        },
+        mounted() {
+
+            if (this.trigger === 'hover') {
+                this.$refs.popover.addEventListener('mouseenter', this.open)
+                this.$refs.popover.addEventListener('mouseleave', this.close)
+            }
+        },
+        destroyed() {
+            if (this.trigger === 'hover') {
+                this.$refs.popover.removeEventListener('mouseenter', this.open)
+                this.$refs.popover.removeEventListener('mouseleave', this.close)
+            }
         },
         methods: {
             positionContent() {
@@ -43,14 +63,11 @@
                 }
                 contentWrapper.style.left = positons[this.position].left + 'px'
                 contentWrapper.style.top = positons[this.position].top + 'px'
-
-
             },
             onClickDocument(e){
                 if (this.$refs.popover &&
-                    (this.$refs.popover === e.target || this.$refs.contentWrapper.contains(e.target))) {
-                    return
-                }
+                    (this.$refs.popover === e.target || this.$refs.popover.contains(e.target))
+                ) { return }
                 this.close()
             },
             open() {
@@ -65,6 +82,7 @@
                 document.removeEventListener('click', this.onClickDocument)
             },
             onClick(event) {
+                if(this.trigger === 'hover') {return}
                 if(this.$refs.triggerWrapper.contains(event.target)) {
                     if(this.visible === false) {
                         this.open()
@@ -73,8 +91,6 @@
                     }
                 }
             }
-        },
-        mounted() {
         }
     }
 </script>
@@ -115,6 +131,7 @@
             margin-top: -10px;
             &::before,&::after {
                 left: 10px;
+                border-bottom: none;
             }
             &::before {
                 border-top-color: black;
@@ -129,6 +146,7 @@
             margin-top: 10px;
             &::before,&::after {
                 left: 10px;
+                border-top: none;
             }
             &::before {
                 border-bottom-color: black;
@@ -145,6 +163,7 @@
             &::before,&::after {
                 transform: translateY(-50%);
                 top: 50%;
+                border-right: none;
             }
             &::before {
                 border-left-color: black;
@@ -160,6 +179,7 @@
             &::before, &::after {
                 transform: translateY(-50%);
                 top: 50%;
+                border-left: none;
             }
             &::before {
                 border-right-color: black;
