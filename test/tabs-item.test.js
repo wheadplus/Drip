@@ -17,7 +17,7 @@ Vue.config.productionTip = false
 Vue.config.devtools = false
 
 describe('tabsItem', () => {
-    console.log("hello world")
+
     it('存在.', () => {
         expect(TabsItem).to.exist
     })
