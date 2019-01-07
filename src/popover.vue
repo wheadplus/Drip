@@ -27,22 +27,23 @@
             positionContent() {
                 const {contentWrapper, triggerWrapper} = this.$refs
                 document.body.appendChild(this.$refs.contentWrapper)
-                let {height, width, top, left} = triggerWrapper.getBoundingClientRect()
-                if(this.position === 'top') {
-                    contentWrapper.style.left = left + window.scrollX + 'px'
-                    contentWrapper.style.top = top + window.scrollY + 'px'
-                } else if (this.position === 'bottom'){
-                    contentWrapper.style.left = left + window.scrollX + 'px'
-                    contentWrapper.style.top = top + height + window.scrollY + 'px'
-                } else if (this.position === 'left'){
-                    contentWrapper.style.left = left + window.scrollX + 'px'
-                    let  height2 = contentWrapper.getBoundingClientRect().height
-                    contentWrapper.style.top = top + window.scrollY + (height - height2) / 2 + 'px'
-                } else {
-                    contentWrapper.style.left = left + width + window.scrollX + 'px'
-                    let  height2 = contentWrapper.getBoundingClientRect().height
-                    contentWrapper.style.top = top + window.scrollY + (height - height2) / 2 + 'px'
+                const {height, width, top, left} = triggerWrapper.getBoundingClientRect()
+                const  height2 = contentWrapper.getBoundingClientRect().height
+                let positons = {
+                    top : {left : left + window.scrollX, top : top + window.scrollY},
+                    bottom : {left : left + window.scrollX, top : top + height + window.scrollY},
+                    left : {
+                        left : left + window.scrollX,
+                        top : top + window.scrollY + (height - height2) / 2
+                    },
+                    right : {
+                        left : left + width + window.scrollX,
+                        top : top + window.scrollY + (height - height2) / 2
+                    }
                 }
+                contentWrapper.style.left = positons[this.position].left + 'px'
+                contentWrapper.style.top = positons[this.position].top + 'px'
+
 
             },
             onClickDocument(e){

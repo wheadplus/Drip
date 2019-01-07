@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7acf5c9c-6922-4c92-b203-23cda78f569e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/popover.vue" afterPath="$PROJECT_DIR$/src/popover.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -50,7 +49,7 @@
         <entry file="file://$PROJECT_DIR$/src/popover.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="352">
-              <caret line="41" column="31" lean-forward="true" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+              <caret line="35" column="53" lean-forward="true" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -252,14 +251,7 @@
       <workItem from="1545548972287" duration="54085000" />
       <workItem from="1546001509770" duration="5716000" />
       <workItem from="1546050112119" duration="27298000" />
-      <workItem from="1546392572656" duration="25952000" />
-    </task>
-    <task id="LOCAL-00006" summary="注释console的数据">
-      <created>1545097282018</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1545097282018</updated>
+      <workItem from="1546392572656" duration="26436000" />
     </task>
     <task id="LOCAL-00007" summary="修改第一个元素 marin-left:-1px的情况">
       <created>1545097663159</created>
@@ -597,7 +589,14 @@
       <option name="project" value="LOCAL" />
       <updated>1546775610785</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="完成position四个方向">
+      <created>1546824199050</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1546824199050</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -606,7 +605,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169086000" />
+    <option name="totallyTimeSpent" value="169570000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="767" y="33" width="1411" height="1037" extended-state="0" />
@@ -638,7 +637,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="添加 toast 和 plugin。通过plugin动态创建组件和避免直接在prototype赋值。" />
     <MESSAGE value="toast添加关闭按钮，样式和点击事件" />
     <MESSAGE value="实现 autoClose， closeButton， enableHtml，多行文字" />
     <MESSAGE value="实现 position : top/middle/bottom 功能" />
@@ -663,7 +661,8 @@
     <MESSAGE value="功能基本完成，重构下代码" />
     <MESSAGE value="重构tab.vue" />
     <MESSAGE value="添加css 样式 ，三角用before，after。filter+background 去除三角形没box-shadow的bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加css 样式 ，三角用before，after。filter+background 去除三角形没box-shadow的bug" />
+    <MESSAGE value="完成position四个方向" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成position四个方向" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1092,7 +1091,7 @@
     <entry file="file://$PROJECT_DIR$/src/popover.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
-          <caret line="41" column="31" lean-forward="true" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+          <caret line="35" column="53" lean-forward="true" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="53" />
           <folding />
         </state>
       </provider>
