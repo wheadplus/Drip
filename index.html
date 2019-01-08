@@ -18,60 +18,12 @@
 
 </head>
 <body>
-    <div id="app" style="padding: 200px;">
-        <div style="overflow: hidden">
-            <d-popover>
-                <template slot="content" slot-scope="{close}">
-                    <div>sasssssssssssssssssasssssssssssssssssasssssssssssssss
-                        <d-button @click="close">点我</d-button>ssasssssssssssssssssassssssssssssssss</div>
-                </template>
-                <d-button>上</d-button>
-            </d-popover>
-            <d-popover position="bottom">
-                <template slot="content">
-                    <div><strong><a href="//baidu.com">baidu</a></strong>看见我</div>
-                </template>
-                <d-button>下</d-button>
-            </d-popover>
-            <d-popover position="left">
-                <template slot="content">
-                    <div>看见我</div>
-                </template>
-                <d-button>左</d-button>
-            </d-popover>
-            <d-popover position="right">
-                <template slot="content">
-                    <div>看见我</div>
-                </template>
-                <d-button>右</d-button>
-            </d-popover>
-        </div>
-        <div style="overflow: hidden ;padding-top: 20px;">
-            <d-popover trigger="hover">
-                <template slot="content">
-                    <div>ssssssssssssssssssssssssssssssssa a sdas dasd asd          sdasda s </div>
-                </template>
-                <d-button>上</d-button>
-            </d-popover>
-            <d-popover position="bottom" trigger="hover">
-                <template slot="content">
-                    <div>看见我</div>
-                </template>
-                <d-button>下</d-button>
-            </d-popover>
-            <d-popover position="left" trigger="hover">
-                <template slot="content">
-                    <div>看见我</div>
-                </template>
-                <d-button>左</d-button>
-            </d-popover>
-            <d-popover position="right" trigger="hover">
-                <template slot="content">
-                    <div>看见我</div>
-                </template>
-                <d-button>右</d-button>
-            </d-popover>
-        </div>
+    <div id="app" style="padding: 100px;">
+        <d-collapse>
+            <d-collapse-item title="标题1">内容1</d-collapse-item>
+            <d-collapse-item title="标题2">内容2</d-collapse-item>
+            <d-collapse-item title="标题3">内容3</d-collapse-item>
+        </d-collapse>
     </div>
 
 <script src="./src/app.js"></script>
