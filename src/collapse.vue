@@ -13,10 +13,19 @@
                 eventBus: new Vue()
             }
         },
+        props: {
+          single : {
+              type: Boolean,
+              default: false
+          }
+        },
         provide() {
-            return {
-                eventBus: this.eventBus
+            if(this.single) {
+                return {
+                    eventBus: this.eventBus
+                }
             }
+
         }
     }
 </script>
