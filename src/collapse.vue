@@ -14,17 +14,27 @@
             }
         },
         props: {
-          single : {
-              type: Boolean,
-              default: false
-          }
+            single: {
+                type: Boolean,
+                default: false
+            },
+            selected: {
+                type: String || Number,
+
+            }
         },
         provide() {
-            if(this.single) {
-                return {
-                    eventBus: this.eventBus
-                }
+            return {
+                eventBus: this.eventBus
             }
+
+        },
+        mounted() {
+            this.eventBus.$emit('update:selected', this.selected)
+            this.eventBus.$on('update:selected', (name) => {
+                console.log(name)
+                this.$emit('update:selected', name)//通知外面数据更新
+            })
 
         }
     }
