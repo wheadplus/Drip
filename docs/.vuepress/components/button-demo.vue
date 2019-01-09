@@ -13,11 +13,10 @@
 </template>
 <script>
     import Button from '../../../src/button'
-    import Icon from '../../../src/icon.vue'
+
     export default {
         components: {
             'd-button': Button,
-            'd-icon': Icon,
         },
         data () {
             return {

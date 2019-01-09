@@ -11,7 +11,9 @@
 </template>
 
 <script>
+    import Icon from './icon'
     export default {
+        components: {'d-icon': Icon},
         name: "drip-button",
         props: {
             icon: {},
