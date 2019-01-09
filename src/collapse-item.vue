@@ -29,30 +29,25 @@
         },
         inject: ['eventBus'],
         mounted () {
-            this.eventBus && this.eventBus.$on('update:selected', (name) => {
-                if (name !== this.name) {
-                    this.close()
-                } else {
-                    this.doshow()
-                }
-            })
+            this.updateItem()
         },
         methods: {
             toggle() {
-
                 if(this.open) {
-                    this.open = false
-
+                    this.eventBus && this.eventBus.$emit('update:removeSelected', this.name)
                 } else  {
-
-                    this.eventBus.$emit('update:selected', this.name)
+                    this.eventBus && this.eventBus.$emit('update:addSelected', this.name)
                 }
             },
-            close() {
-                this.open = false
-            },
-            doshow() {
-                this.open = true
+            //通过eventBus 接受父亲组件的更新消息
+            updateItem() {
+                this.eventBus && this.eventBus.$on('update:selected', (names) => {
+                    if (names.indexOf(this.name) >= 0) {
+                        this.open = true
+                    } else {
+                        this.open = false
+                    }
+                })
             }
         }
     }
@@ -86,7 +81,6 @@
         }
         >.content {
             padding: 8px;
-            background: #666;
         }
     }
 </style>

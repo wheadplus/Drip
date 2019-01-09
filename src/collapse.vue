@@ -10,7 +10,8 @@
         name: "drip-collapse",
         data () {
             return {
-                eventBus: new Vue()
+                eventBus: new Vue(),
+                selectedArray: []
             }
         },
         props: {
@@ -19,7 +20,7 @@
                 default: false
             },
             selected: {
-                type: String || Number,
+                type: Array,
 
             }
         },
@@ -31,11 +32,32 @@
         },
         mounted() {
             this.eventBus.$emit('update:selected', this.selected)
-            this.eventBus.$on('update:selected', (name) => {
-                console.log(name)
-                this.$emit('update:selected', name)//通知外面数据更新
-            })
 
+            this.showItem()
+            this.closeItem()
+        },
+        methods: {
+            showItem() {
+                this.eventBus.$on('update:addSelected', (name) => {
+                    let selectedCopy = JSON.parse(JSON.stringify(this.selected))
+                    if(this.single) {
+                        selectedCopy = [name]
+                    } else {
+                        selectedCopy.push(name)
+                    }
+                    this.eventBus.$emit('update:selected', selectedCopy)
+                    this.$emit('update:selected', selectedCopy)//通知外面数据更新
+                })
+            },
+            closeItem() {
+                this.eventBus.$on('update:removeSelected', (name) => {
+                    let selectedCopy = JSON.parse(JSON.stringify(this.selected))
+                    let index = selectedCopy.indexOf(name)
+                    selectedCopy.splice(index, 1)
+                    this.eventBus.$emit('update:selected', selectedCopy)
+                    this.$emit('update:selected', selectedCopy)
+                })
+            }
         }
     }
 </script>
