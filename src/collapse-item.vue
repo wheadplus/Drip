@@ -65,6 +65,7 @@
             display: flex;
             align-items: center;
             padding: 0 8px;
+            background-color: lighten($grey, 8%);
         }
         &:first-child {
             >.title {
