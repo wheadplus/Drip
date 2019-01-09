@@ -6,8 +6,8 @@
 
 <script>
 export default {
+    name: "drip-button-group",
     mounted(){
-        //console.log(this.$el.children)
         for(let node of this.$el.children) {
             let name = node.nodeName.toLowerCase()
             if(name !== "button") {

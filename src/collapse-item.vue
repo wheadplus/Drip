@@ -11,7 +11,7 @@
 
 <script>
     export default  {
-        name: "dripCollapseItem",
+        name: "drip-collapse-item",
         props: {
             title: {
                 type: String,

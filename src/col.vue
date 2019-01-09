@@ -16,7 +16,7 @@
         return valid
     }
     export default {
-        name: "d-col",
+        name: "drip-col",
         props: {
             span: {type :[Number , String]},
             offset: {type: [Number, String]},

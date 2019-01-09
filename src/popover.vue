@@ -10,7 +10,7 @@
 
 <script>
     export default {
-        name: "GuluPopover",
+        name: "drip-popover",
         data () {
             return { visible: false }
         },

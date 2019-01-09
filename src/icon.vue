@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name: 'd-icon',
+    name: 'drip-icon',
     props: ['name']
 }
 </script>

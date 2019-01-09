@@ -17,7 +17,7 @@
 <script>
     import Icon from './icon.vue'
     export default {
-        name: 'd-input',
+        name: 'drip-input',
         components: {Icon},
         props: {
             value: {

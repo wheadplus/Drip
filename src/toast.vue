@@ -19,7 +19,7 @@
         props: {
             autoClose: {
                 type: [Boolean, Number],
-                default: 4 ,
+                default: 5 ,
                 validator: function (value) {
                     return value === false || typeof value === 'number';
                 }
@@ -72,7 +72,6 @@
                 if(this.closeButton && typeof this.closeButton.callback === "function") {
                     this.closeButton.callback(this)
                 }
-
             }
         },
         computed: {
