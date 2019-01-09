@@ -4,7 +4,7 @@
         <d-icon class="icon" v-if="icon && !loading" :name="icon">
         </d-icon>
         <d-icon class="loading" v-if="loading" name="loading"></d-icon>
-        <div class="content">
+        <div class="d-button-content">
             <slot></slot>
         </div>
     </button>
@@ -55,10 +55,10 @@
         &:active {  background-color: $button-active-bg;  }
         &:focus {  outline: none;  }
         >.icon {  order: 1; margin-right: .4em; }
-        >.content {  order: 2;  }
+        >.d-button-content {  order: 2;  }
         &.icon-right {
             > .icon {  order: 2;  margin-left: .4em; margin-right: 0;}
-            > .content {  order: 1;  }
+            > .d-button-content {  order: 1;  }
         }
         >.loading { animation: spin 2s infinite linear;  }
     }

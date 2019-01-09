@@ -6,7 +6,9 @@
   "scripts": {
     "start": "npx parcel index.html --no-cache",
     "dev-test": "parcel watch test/* --no-cache & karma start",
-    "test": "parcel build test/* --no-minify && karma start --single-run"
+    "test": "parcel build test/* --no-minify && karma start --single-run",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "keywords": [
     "ui",
@@ -25,8 +27,10 @@
     "karma-mocha": "^1.3.0",
     "karma-sinon-chai": "^2.0.2",
     "mocha": "^5.2.0",
+    "node-sass": "^4.11.0",
     "parcel-bundler": "^1.10.3",
     "sass": "^1.15.2",
+    "sass-loader": "^7.1.0",
     "sinon": "^7.2.2",
     "sinon-chai": "^3.3.0",
     "vue-template-compiler": "^2.5.21"
@@ -35,7 +39,8 @@
     "col": "^0.1.0",
     "icon.vue": "^0.1.5",
     "vue": "^2.5.21",
-    "vue-hot-reload-api": "^2.3.1"
+    "vue-hot-reload-api": "^2.3.1",
+    "vuepress": "^0.14.8"
   },
   "alias": {
     "vue": "./node_modules/vue/dist/vue.common.js"

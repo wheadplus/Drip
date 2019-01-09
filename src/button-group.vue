@@ -22,6 +22,7 @@ export default {
     /*中间边重复， 使用border-left：none；会产生hover时少一边的情况。
         改用 margin-left：-1px；hover时定位浮起来
     */
+
     .d-button-group {
         display: inline-flex;
         vertical-align: middle;
