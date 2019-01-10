@@ -1,4 +1,5 @@
 module.exports = {
+    base: 'Drip/',
     title: 'Drip-UI',
     description: '一个很好用的UI框架',
     themeConfig: {
@@ -20,12 +21,16 @@ module.exports = {
                 title: '组件',
                 collapsable: false,
                 children: [
-                    '/components/button.md'
+                    '/components/button',
+                    '/components/grid',
+                    '/components/input',
+                    '/components/layout',
+                    '/components/tabs',
+                    '/components/toast',
+                    '/components/popover',
                 ]
             },
         ]
     },
-    markdown: {
-        lineNumbers: true
-    }
+
 }

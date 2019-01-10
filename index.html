@@ -13,6 +13,10 @@
 </head>
 <body>
     <div id="app" style="padding: 100px;">
+        <d-button-group>
+            <d-button icon="left">上一页</d-button>
+            <d-button icon="right" icon-position="right">下一页</d-button>
+        </d-button-group>
         <d-button icon="settings">123</d-button>
         <d-collapse :selected.sync="selectedTab" single>
             <d-collapse-item title="标题1" name="1">内容1</d-collapse-item>

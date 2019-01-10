@@ -3,12 +3,10 @@
         <div>
             <d-button>默认按钮</d-button>
             <d-button icon="settings">默认按钮</d-button>
+            <d-button icon="settings" iconPosition="right">默认按钮</d-button>
+            <d-button :loading="true">默认按钮</d-button>
         </div>
-
-
-        <pre>
-            <code>{{content}}</code>
-        </pre>
+        <pre><code>{{content}}</code></pre>
     </div>
 </template>
 <script>
@@ -21,11 +19,11 @@
         data () {
             return {
                 content: `
-        <d-button>默认按钮</d-button>
-        <d-button icon="settings">默认按钮</d-button>
-        <d-button :loadind="true">默认按钮</d-button>
-        <d-button disabled>默认按钮</d-button>
-      `
+            <d-button>默认按钮</d-button>
+            <d-button icon="settings">默认按钮</d-button>
+            <d-button icon="settings" iconPosition="right">默认按钮</d-button>
+            <d-button :loading="true">默认按钮</d-button>
+      `.replace(/\t+| +/g, '').trim()
             }
         }
     }
