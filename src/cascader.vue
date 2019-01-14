@@ -4,18 +4,16 @@
             <slot></slot>
         </div>
         <div class="popover" v-if="popoverVisible">
-            <div v-for="item in source">
-                <cascader-item :sourceItem="item"></cascader-item>
-            </div>
+            <cascader-items :items="source"></cascader-items>
         </div>
     </div>
 </template>
 
 <script>
-    import CascaderItem from './cascader-item.vue'
+    import CascaderItems from './cascader-items.vue'
     export default {
         name: "Grip-Cascader",
-        components:{CascaderItem},
+        components:{CascaderItems},
         props: {
             source: {
                 type: Array
@@ -23,7 +21,7 @@
         },
         data() {
             return {
-                popoverVisible: false
+                popoverVisible: false,
             }
         }
     }
@@ -39,8 +37,8 @@
         }
         .popover {
             border: 1px solid blue;
-            height: 128px;
-            width: 64px;
+            display: flex;
+
         }
     }
 </style>
