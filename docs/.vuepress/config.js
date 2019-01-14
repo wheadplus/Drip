@@ -1,5 +1,5 @@
 module.exports = {
-    base: 'Drip/',
+    base: '/Drip/',
     title: 'Drip-UI',
     description: '一个很好用的UI框架',
     themeConfig: {
@@ -22,12 +22,12 @@ module.exports = {
                 collapsable: false,
                 children: [
                     '/components/button',
-                    '/components/grid',
-                    '/components/input',
-                    '/components/layout',
-                    '/components/tabs',
-                    '/components/toast',
-                    '/components/popover',
+                    '/components/button',
+                    '/components/button',
+                    '/components/button',
+                    '/components/button',
+                    '/components/button',
+                    '/components/button',
                 ]
             },
         ]

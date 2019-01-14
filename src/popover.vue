@@ -97,8 +97,7 @@
 </script>
 
 <style scoped lang="scss">
-    $border-color: #333;
-    $border-radius: 4px;
+    @import "var";
     .popover {
         display: inline-block;
         vertical-align: middle;
@@ -115,7 +114,6 @@
         filter:  drop-shadow(0 0 3px rgba(0, 0, 0, .5));
         background-color: white;
         padding: .5em 1em;
-
         max-width: 20em;
         word-break: break-all;
 

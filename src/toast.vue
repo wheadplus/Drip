@@ -83,7 +83,7 @@
 </script>
 
 <style lang="scss" scoped>
-    $font-size: 14px;
+    @import "var";
     $toast-min-height: 40px;
     $toast-bg: rgba(0,0,0,0.74);
     $animation-duration: 300ms;

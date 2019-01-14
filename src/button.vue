@@ -33,15 +33,7 @@
 </script>
 
 <style lang="scss" scoped>
-
-    $button-height: 32px;
-    $font-size: 14px;
-    $button-bg: white;
-    $button-active-bg: #eee;
-    $border-radius: 4px;
-    $font-color: #333;
-    $border-color: #999;
-    $border-color-hover: #666;
+    @import "var";
     @keyframes spin {
         0% {transform: rotate(0deg); }
         100% {transform: rotate(360deg); }
