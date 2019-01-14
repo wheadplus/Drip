@@ -50,33 +50,7 @@ new Vue({
        selectedTab: ['2','1']
     },
     methods: {
-        yyy(data) {
-            console.log('yyy')
-            console.log(data);
-        },
-        inputChange (e) {
-            console.log(e)
-        },
-        showToast1() {
-            this.showToast('top')
-        },
-        showToast2() {
-            this.showToast('middle')
-        },
-        showToast3() {
-            this.showToast('bottom')
-        },
-        showToast(position) {
-          this.$toast(`你的智商目前为${parseInt(Math.random()*100)},请充值`, {
-              position,
-              autoClose: 3,
-              closeButton: {
-                  text: '知道了',
-                  callback(toast){
-                      console.log("用户知道啦")
-                  }
-              }
-          })
-        }
+
+
     }
 })
