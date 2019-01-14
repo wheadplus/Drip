@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7acf5c9c-6922-4c92-b203-23cda78f569e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cascader-items.vue" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/cascader-item.vue" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cascader-items.vue" afterPath="$PROJECT_DIR$/src/cascader-items.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cascader.vue" afterPath="$PROJECT_DIR$/src/cascader.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/var.scss" afterPath="$PROJECT_DIR$/src/var.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,8 +25,8 @@
       <file leaf-file-name="cascader.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cascader.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+            <state relative-caret-position="501">
+              <caret line="45" column="29" lean-forward="true" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -35,8 +35,18 @@
       <file leaf-file-name="cascader-items.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cascader-items.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="26" column="19" lean-forward="true" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+            <state relative-caret-position="372">
+              <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="var.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/var.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="3" column="29" lean-forward="true" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -45,8 +55,8 @@
       <file leaf-file-name="demo.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/demo.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+            <state relative-caret-position="120">
+              <caret line="6" column="18" lean-forward="true" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -82,6 +92,8 @@
       <find>open</find>
       <find>rem</find>
       <find>content</find>
+      <find>demo</find>
+      <find>10</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -90,7 +102,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/tabs-pane.vue" />
         <option value="$PROJECT_DIR$/src/tabs-item-test.js" />
         <option value="$PROJECT_DIR$/test/tabs-item-test.js" />
         <option value="$PROJECT_DIR$/test/tabsItem.test.js" />
@@ -137,8 +148,9 @@
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main.js" />
-        <option value="$PROJECT_DIR$/src/demo.vue" />
         <option value="$PROJECT_DIR$/src/cascader-item.vue" />
+        <option value="$PROJECT_DIR$/src/demo.vue" />
+        <option value="$PROJECT_DIR$/src/var.scss" />
         <option value="$PROJECT_DIR$/src/cascader.vue" />
         <option value="$PROJECT_DIR$/src/cascader-items.vue" />
       </list>
@@ -161,8 +173,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="715" />
-    <option name="y" value="100" />
+    <option name="x" value="696" />
+    <option name="y" value="26" />
     <option name="width" value="1411" />
     <option name="height" value="1037" />
   </component>
@@ -276,14 +288,7 @@
       <workItem from="1547023725022" duration="22307000" />
       <workItem from="1547195335526" duration="125000" />
       <workItem from="1547432261861" duration="771000" />
-      <workItem from="1547433053007" duration="9877000" />
-    </task>
-    <task id="LOCAL-00025" summary="响应式完成">
-      <created>1545652446379</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1545652446379</updated>
+      <workItem from="1547433053007" duration="16539000" />
     </task>
     <task id="LOCAL-00026" summary="轻微重构下">
       <created>1545655724376</created>
@@ -621,7 +626,14 @@
       <option name="project" value="LOCAL" />
       <updated>1547447786491</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="popover递归渲染样式">
+      <created>1547450409776</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1547450409776</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -630,10 +642,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="231098000" />
+    <option name="totallyTimeSpent" value="237760000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="715" y="100" width="1411" height="1037" extended-state="0" />
+    <frame x="696" y="26" width="1411" height="1037" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19914953" sideWeight="0.48698482" order="0" side_tool="false" content_ui="combo" />
@@ -664,7 +676,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="解决外层div overflow hidden 造成的 bug" />
     <MESSAGE value="功能基本完成，重构下代码" />
     <MESSAGE value="重构tab.vue" />
     <MESSAGE value="添加css 样式 ，三角用before，after。filter+background 去除三角形没box-shadow的bug" />
@@ -689,7 +700,8 @@
     <MESSAGE value="改用vue-cli构建项目" />
     <MESSAGE value="添加 误删的.gitignore" />
     <MESSAGE value="递归组件解决层级问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="递归组件解决层级问题" />
+    <MESSAGE value="popover递归渲染样式" />
+    <option name="LAST_COMMIT_MESSAGE" value="popover递归渲染样式" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -698,13 +710,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/tabs.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="45" column="33" lean-forward="false" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sider.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -1092,24 +1097,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/demo.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+        <state relative-caret-position="120">
+          <caret line="6" column="18" lean-forward="true" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cascader.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+        <state relative-caret-position="501">
+          <caret line="45" column="29" lean-forward="true" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/var.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="29" lean-forward="true" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cascader-items.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="26" column="19" lean-forward="true" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+        <state relative-caret-position="372">
+          <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
           <folding />
         </state>
       </provider>

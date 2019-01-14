@@ -1,22 +1,30 @@
 <template>
-    <div class="cascaderItem">
-        <div class="left">
+
+    <div class="cascaderItem" :style="`{height:${popoverHeight}px}`" >
+        <div class="left" >
             <div class="label" v-for="item in items" @click="leftSelected = item">
-                {{item.name}}
+                <span class="label-content">{{item.name}}</span>
+                <d-icon class="arrow" name="right" v-if="item.children"></d-icon>
             </div>
+
         </div>
-        <div class="right" v-if="rightItems">
+        <div class="right" v-if="rightItems" >
             <Grip-cascader-item :items="rightItems"></Grip-cascader-item>
         </div>
     </div>
 </template>
 
 <script>
+    import Icon from  './icon.vue'
     export default {
         name: "Grip-cascader-item",
+        components:{'d-icon': Icon},
         props: {
             items: {
                 type: Array
+            },
+            popoverHeight: {
+                type: Number,
             }
         },
         data() {
@@ -32,23 +40,39 @@
                     return null
                 }
             }
-        }
+        },
+
     }
 </script>
 
 <style lang="scss" scoped>
     @import "var";
     .cascaderItem {
-        height:100px;
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;
+        height: 200px;
+
         .left {
-            border: 1px solid palegoldenrod;
+            padding: .3em 0;
             height: 100%;
-            padding: 0.5em 1em;
         }
         .right {
+            height: 100%;
+            border-left: 1px solid $border-color-light;
+        }
+        .label {
+            padding: .5em 1em;
+            .label-content {
+                margin-right: 1em;
+            }
+            .arrow {
+                margin-left: auto;
+                transform: scale(.5);
+            }
+            &:hover {
+                background-color: $grey;
+            }
         }
     }
 </style>

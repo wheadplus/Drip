@@ -3,8 +3,10 @@
         <div class="trigger" @click="popoverVisible = !popoverVisible">
             <slot></slot>
         </div>
-        <div class="popover" v-if="popoverVisible">
-            <cascader-items :items="source"></cascader-items>
+        <div class="popover-warpper" v-if="popoverVisible">
+            <cascader-items :items="source" class="popover"
+                :popoverHeight="popoverHeight"
+            ></cascader-items>
         </div>
     </div>
 </template>
@@ -17,6 +19,9 @@
         props: {
             source: {
                 type: Array
+            },
+            popoverHeight: {
+                type: Number,
             }
         },
         data() {
@@ -30,15 +35,34 @@
 <style lang="scss" scoped>
     @import "var";
     .cascader {
+        position: relative;
         .trigger {
-            border: 1px solid blue;
+            border: 1px solid black;
             height: 32px;
             width: 128px;
         }
-        .popover {
-            border: 1px solid blue;
-            display: flex;
+        .popover-warpper {
+            position: absolute; top: 100%; left: 0; background: white; display: flex;
+            margin-top: 10px;
+            @extend .box-shadow;
+            &:before,&:after {
+                content: "";
+                position: absolute;
+                left: 10px;
+                border:10px solid transparent;
+            }
+            &:before {
+                border-bottom-color: $border-color-light;
+                top:-20px;
 
+
+            }
+            &:after {
+                border-bottom-color: white;
+                top:-19px;
+
+            }
         }
+
     }
 </style>
