@@ -1,15 +1,21 @@
 <template>
 
     <div class="cascaderItem" :style="`{height:${popoverHeight}px}`" >
+
         <div class="left" >
-            <div class="label" v-for="item in items" @click="leftSelected = item">
+            <div class="label" v-for="item in items" @click="onClickLabel(item)">
                 <span class="label-content">{{item.name}}</span>
                 <d-icon class="arrow" name="right" v-if="item.children"></d-icon>
             </div>
 
         </div>
         <div class="right" v-if="rightItems" >
-            <Grip-cascader-item :items="rightItems"></Grip-cascader-item>
+            <Grip-cascader-item
+                    :level="level+1"
+                    :items="rightItems"
+                    :selected="selected"
+                    @update:selected="onUpdateSelected"
+            ></Grip-cascader-item>
         </div>
     </div>
 </template>
@@ -25,23 +31,37 @@
             },
             popoverHeight: {
                 type: Number,
+            },
+            selected: {
+                type: Array,
+                default: () => []
+            },
+            level: {
+                type: Number,
+                default: 0
             }
         },
-        data() {
-            return {
-                leftSelected: null
-            }
-        },
+
         computed: {
             rightItems () {
-                if(this.leftSelected && this.leftSelected.children) {
-                    return this.leftSelected.children
+                let currentSelected = this.selected[this.level]
+                if (currentSelected && currentSelected.children) {
+                    return currentSelected.children
                 } else {
                     return null
                 }
             }
         },
-
+        methods: {
+            onClickLabel (item) {
+                let copy = JSON.parse(JSON.stringify(this.selected))
+                copy[this.level] = item
+                this.$emit('update:selected', copy)
+            },
+            onUpdateSelected (newSelected) {
+                this.$emit('update:selected', newSelected)
+            }
+        }
     }
 </script>
 
