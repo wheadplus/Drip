@@ -2,7 +2,7 @@
     <div class="cascader">
 
         <div class="trigger" @click="popoverVisible = !popoverVisible">
-            <slot></slot>
+            {{result || '&nbsp;'}}
         </div>
         <div class="popover-warpper" v-if="popoverVisible">
             <cascader-items :items="source" class="popover"
@@ -40,6 +40,11 @@
             onUpdateSelected (newSelected) {
                 this.$emit('update:selected', newSelected)
             }
+        },
+        computed: {
+            result() {
+                return this.selected.map((item) => {return item.name}).join('/')
+            }
         }
     }
 </script>
@@ -50,12 +55,16 @@
         position: relative;
         .trigger {
             border: 1px solid black;
-            height: 32px;
-            width: 128px;
+            height: $height;
+            display: inline-flex;
+            justify-content: flex-start;
+            align-items: center;
+            min-width: 160px;
+            padding:1em;
         }
         .popover-warpper {
             position: absolute; top: 100%; left: 0; background: white; display: flex;
-            margin-top: 10px;
+            margin-top: 10px; overflow: auto;
             @extend .box-shadow;
             &:before,&:after {
                 content: "";
