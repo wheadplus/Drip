@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7acf5c9c-6922-4c92-b203-23cda78f569e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/db.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cascader.vue" afterPath="$PROJECT_DIR$/src/cascader.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cascader-items.vue" afterPath="$PROJECT_DIR$/src/cascader-items.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,21 +20,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="cascader.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cascader.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cascader.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="54" column="27" lean-forward="true" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
+            <state relative-caret-position="260">
+              <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cascader-items.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="cascader-items.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cascader-items.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="57" column="39" lean-forward="true" selection-start-line="57" selection-start-column="39" selection-end-line="57" selection-end-column="39" />
+            <state relative-caret-position="380">
+              <caret line="33" column="14" lean-forward="true" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -54,10 +53,10 @@
       <file leaf-file-name="demo.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/demo.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+            <state relative-caret-position="640">
+              <caret line="32" column="10" lean-forward="true" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
               <folding>
-                <element signature="e#385#418#0" expanded="true" />
+                <element signature="e#427#460#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -107,6 +106,8 @@
       <find>10</find>
       <find>chi</find>
       <find>children</find>
+      <find>new</find>
+      <find>console.</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -162,10 +163,10 @@
         <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/src/cascader-item.vue" />
         <option value="$PROJECT_DIR$/src/var.scss" />
-        <option value="$PROJECT_DIR$/src/cascader-items.vue" />
         <option value="$PROJECT_DIR$/src/db.js" />
         <option value="$PROJECT_DIR$/src/demo.vue" />
         <option value="$PROJECT_DIR$/src/cascader.vue" />
+        <option value="$PROJECT_DIR$/src/cascader-items.vue" />
       </list>
     </option>
   </component>
@@ -186,8 +187,7 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="509" />
-    <option name="y" value="34" />
+    <option name="x" value="600" />
     <option name="width" value="1411" />
     <option name="height" value="1037" />
   </component>
@@ -301,21 +301,7 @@
       <workItem from="1547023725022" duration="22307000" />
       <workItem from="1547195335526" duration="125000" />
       <workItem from="1547432261861" duration="771000" />
-      <workItem from="1547433053007" duration="26156000" />
-    </task>
-    <task id="LOCAL-00029" summary="添加 layout相关组件，完成基本功能">
-      <created>1545722802189</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1545722802189</updated>
-    </task>
-    <task id="LOCAL-00030" summary="添加侧边栏滑动关闭的功能">
-      <created>1545724469795</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1545724469796</updated>
+      <workItem from="1547433053007" duration="36163000" />
     </task>
     <task id="LOCAL-00031" summary="忽略 .idea/">
       <created>1545725537975</created>
@@ -646,7 +632,21 @@
       <option name="project" value="LOCAL" />
       <updated>1547480633940</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="添加测试数据库">
+      <created>1547517019233</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1547517019233</updated>
+    </task>
+    <task id="LOCAL-00079" summary="分治法获取item">
+      <created>1547559146690</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1547559146690</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -655,10 +655,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="247377000" />
+    <option name="totallyTimeSpent" value="257384000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="509" y="34" width="1411" height="1037" extended-state="0" />
+    <frame x="600" y="0" width="1411" height="1037" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19914953" sideWeight="0.48698482" order="0" side_tool="false" content_ui="combo" />
@@ -689,8 +689,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="完成position四个方向" />
-    <MESSAGE value="表驱动编程重构代码" />
     <MESSAGE value="表驱动编程重构代码，即用对象代替冗余的if else" />
     <MESSAGE value="解决抖动bug，抖动是border造成的。" />
     <MESSAGE value="添加插槽的 close API" />
@@ -714,7 +712,9 @@
     <MESSAGE value="添加基础样式" />
     <MESSAGE value="改为单向数据流，即 上往下通过props传数据，下往上通过$emit()通知上层，上层监听updata接收$emit()的数据" />
     <MESSAGE value="更新当前层级数据时，删去下一层数据" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新当前层级数据时，删去下一层数据" />
+    <MESSAGE value="添加测试数据库" />
+    <MESSAGE value="分治法获取item" />
+    <option name="LAST_COMMIT_MESSAGE" value="分治法获取item" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1101,22 +1101,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/var.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="11" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cascader-items.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="57" column="39" lean-forward="true" selection-start-line="57" selection-start-column="39" selection-end-line="57" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/db.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1127,18 +1111,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/demo.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+        <state relative-caret-position="640">
+          <caret line="32" column="10" lean-forward="true" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
           <folding>
-            <element signature="e#385#418#0" expanded="true" />
+            <element signature="e#427#460#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cascader.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="54" column="27" lean-forward="true" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
+        <state relative-caret-position="260">
+          <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/var.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="11" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cascader-items.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="33" column="14" lean-forward="true" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
           <folding />
         </state>
       </provider>
