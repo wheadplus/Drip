@@ -5,6 +5,7 @@
         </div>
         <div class="popover-warpper" v-if="popoverVisible">
             <cascader-items :items="source" class="popover"
+                :loading-item="loadingItem"
                 :loadData="loadData"
                 :popoverHeight="popoverHeight"
                 :selected="selected"
@@ -43,6 +44,7 @@
         data() {
             return {
                 popoverVisible: false,
+                loadingItem: {}
             }
         },
         methods: {
@@ -100,15 +102,17 @@
                     }
                 }
                 let updateSource = (result) => {
+                    this.loadingItem = {}
                     let copy = JSON.parse(JSON.stringify(this.source))
                     let toUpdate = complex(copy, lastItem.id)
                     //this.$set(toUpdate, 'children', result)
                     toUpdate.children = result
                     this.$emit('update:source', copy)
                 }
-                if(!lastItem.isLeaf) {
-                    this.loadData && this.loadData(lastItem, updateSource)  //把别传给我的函数调用一下
+                if(!lastItem.isLeaf && this.loadData) {
+                    this.loadData(lastItem, updateSource)  //把别传给我的函数调用一下
                     // 调回调的时候传一个函数，updateSource，它被调用
+                    this.loadingItem = lastItem
                 }
             }
         },
@@ -136,10 +140,11 @@
             align-items: center;
             min-width: 160px;
             padding:1em;
+            background-color: white;
         }
         .popover-warpper {
             position: absolute; top: 100%; left: 0; background: white; display: flex;
-            margin-top: 10px; overflow: auto;
+            margin-top: 10px; overflow: auto;z-index: 1;
             @extend .box-shadow;
             &:before,&:after {
                 content: "";

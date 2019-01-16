@@ -5,12 +5,20 @@
         <div class="left" >
             <div class="label" v-for="item in items" @click="onClickLabel(item)">
                 <span class="label-content">{{item.name}}</span>
-                <d-icon class="arrow" name="right" v-if="rightArrowVisible(item)"></d-icon>
+               <div class="icons">
+                   <template v-if="item.name === loadingItem.name">
+                       <d-icon class="loading" name="loading"></d-icon>
+                   </template>
+                   <template v-else>
+                       <d-icon class="arrow" name="right" v-if="rightArrowVisible(item)"></d-icon>
+                   </template>
+               </div>
             </div>
 
         </div>
         <div class="right" v-if="rightItems" >
             <Grip-cascader-item
+                    :loading-item="loadingItem"
                     :loadData="loadData"
                     :level="level+1"
                     :items="rightItems"
@@ -43,6 +51,10 @@
             },
             loadData: {
                 type: Function
+            },
+            loadingItem: {
+                type: Object,
+                default: () => ({})
             }
         },
 
@@ -76,6 +88,7 @@
 
 <style lang="scss" scoped>
     @import "var";
+
     .cascaderItem {
         display: flex;
         align-items: flex-start;
@@ -100,9 +113,14 @@
                 margin-right: 1em;
                 user-select: none;
             }
-            .arrow {
+            .icons {
                 margin-left: auto;
-                transform: scale(.5);
+                .arrow {
+                    transform: scale(.5);
+                }
+                .loading {
+                    animation: spin 2s infinite linear;
+                }
             }
             &:hover {
                 background-color: $grey;

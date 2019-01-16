@@ -34,11 +34,6 @@
 
 <style lang="scss" scoped>
     @import "var";
-    @keyframes spin {
-        0% {transform: rotate(0deg); }
-        100% {transform: rotate(360deg); }
-    }
-    
     .d-button {
         font-size: $font-size;  height: $button-height;
         background-color: $button-bg;  padding: 0 1em;
