@@ -1,5 +1,5 @@
 <template>
-    <div class="cascader" ref="cascader">
+    <div class="cascader" ref="cascader" v-ClickOutside="close">
         <div class="trigger" @click="toggle">
             {{result || '&nbsp;'}}
         </div>
@@ -16,9 +16,12 @@
 
 <script>
     import CascaderItems from './cascader-items.vue'
+    import ClickOutside from './click-outside'
+
     export default {
         name: "Grip-Cascader",
         components: {CascaderItems},
+        directives:{ClickOutside},
         props: {
             source: {
                 type: Array
@@ -36,6 +39,7 @@
                 type: Function
             }
         },
+
         data() {
             return {
                 popoverVisible: false,
@@ -44,13 +48,10 @@
         methods: {
             open () {
                 this.popoverVisible = true
-                this.$nextTick(() => {
-                    document.addEventListener('click', this.onClickDocument)
-                })
+
             },
             close() {
                 this.popoverVisible = false
-                document.removeEventListener('click', this.onClickDocument)
             },
             toggle() {
                 if(this.popoverVisible === true) {
