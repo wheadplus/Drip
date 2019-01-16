@@ -1,7 +1,6 @@
 <template>
-    <div class="cascader">
-
-        <div class="trigger" @click="popoverVisible = !popoverVisible">
+    <div class="cascader" ref="cascader">
+        <div class="trigger" @click="toggle">
             {{result || '&nbsp;'}}
         </div>
         <div class="popover-warpper" v-if="popoverVisible">
@@ -43,6 +42,29 @@
             }
         },
         methods: {
+            open () {
+                this.popoverVisible = true
+                this.$nextTick(() => {
+                    document.addEventListener('click', this.onClickDocument)
+                })
+            },
+            close() {
+                this.popoverVisible = false
+                document.removeEventListener('click', this.onClickDocument)
+            },
+            toggle() {
+                if(this.popoverVisible === true) {
+                    this.close()
+                } else {
+                    this.open()
+                }
+            },
+            onClickDocument(e) {
+                let {cascader} = this.$refs
+                let {target} = e
+                if(cascader === target || cascader.contains(target)) {return}
+                this.close()
+            },
             onUpdateSelected(newSelected) {
                 this.$emit('update:selected', newSelected)
 
@@ -77,7 +99,6 @@
                     }
                 }
                 let updateSource = (result) => {
-                    console.log(result)
                     let copy = JSON.parse(JSON.stringify(this.source))
                     let toUpdate = complex(copy, lastItem.id)
                     //this.$set(toUpdate, 'children', result)
@@ -104,6 +125,7 @@
     @import "var";
     .cascader {
         position: relative;
+        display: inline-flex;
         .trigger {
             border: 1px solid black;
             border-radius: .2em;
@@ -123,6 +145,7 @@
                 position: absolute;
                 left: 10px;
                 border:10px solid transparent;
+
             }
             &:before {
                 border-bottom-color: $border-color-light;

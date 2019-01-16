@@ -95,6 +95,7 @@
             padding: .5em 1em;
             cursor: pointer;
             align-items: center;
+            white-space: nowrap;
             .label-content {
                 margin-right: 1em;
                 user-select: none;
