@@ -5,12 +5,13 @@
         <div class="left" >
             <div class="label" v-for="item in items" @click="onClickLabel(item)">
                 <span class="label-content">{{item.name}}</span>
-                <d-icon class="arrow" name="right" v-if="item.children"></d-icon>
+                <d-icon class="arrow" name="right" v-if="rightArrowVisible(item)"></d-icon>
             </div>
 
         </div>
         <div class="right" v-if="rightItems" >
             <Grip-cascader-item
+                    :loadData="loadData"
                     :level="level+1"
                     :items="rightItems"
                     :selected="selected"
@@ -39,6 +40,9 @@
             level: {
                 type: Number,
                 default: 0
+            },
+            loadData: {
+                type: Function
             }
         },
 
@@ -50,8 +54,8 @@
                         return item[0].children
                     }
                 }
+            },
 
-            }
         },
         methods: {
             onClickLabel (item) {
@@ -62,7 +66,10 @@
             },
             onUpdateSelected (newSelected) {
                 this.$emit('update:selected', newSelected)
-            }
+            },
+            rightArrowVisible (item) {
+                return this.loadData ? !item.isLeaf : item.children
+            },
         }
     }
 </script>
@@ -84,9 +91,13 @@
             border-left: 1px solid $border-color-light;
         }
         .label {
+            display: flex;
             padding: .5em 1em;
+            cursor: pointer;
+            align-items: center;
             .label-content {
                 margin-right: 1em;
+                user-select: none;
             }
             .arrow {
                 margin-left: auto;
