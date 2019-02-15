@@ -1,7 +1,7 @@
 <template>
     <div class="popover" @click="onClick" ref="popover">
         <div ref="contentWrapper" class="content-wrapper"
-            :class="{[`position-${position}`]:true}" v-if="visible">
+             :class="{[`position-${position}`]:true}" v-if="visible">
             <slot name="content" :close="close"></slot>
         </div>
         <span ref="triggerWrapper" class="trigger-wrapper"><slot></slot></span>
@@ -15,12 +15,11 @@
             return { visible: false }
         },
         props: {
-
             position: {
                 type: String,
                 default: 'top',
                 validator (value) {
-                     return ['top', 'bottom', 'right', 'left'].indexOf(value) >= 0
+                    return ['top', 'bottom', 'right', 'left'].indexOf(value) >= 0
                 }
             },
             trigger: {
@@ -38,7 +37,7 @@
                 this.$refs.popover.addEventListener('mouseleave', this.close)
             }
         },
-        destroyed() {
+        beforeDestroy() {
             if (this.trigger === 'hover') {
                 this.$refs.popover.removeEventListener('mouseenter', this.open)
                 this.$refs.popover.removeEventListener('mouseleave', this.close)
@@ -98,6 +97,7 @@
 
 <style scoped lang="scss">
     @import "var";
+    $popover-boreder-color: rgba(0, 0, 0, .5);
     .popover {
         display: inline-block;
         vertical-align: middle;
@@ -111,7 +111,7 @@
         position: absolute;
         border: 1px solid $border-color;
         /*box-shadow: 0 0 3px rgba(0, 0, 0, .5);*/
-        filter:  drop-shadow(0 0 3px rgba(0, 0, 0, .5));
+        filter:  drop-shadow(0 0 3px $popover-boreder-color);
         background-color: white;
         padding: .5em 1em;
         max-width: 20em;
@@ -133,7 +133,7 @@
                 border-bottom: none;
             }
             &::before {
-                border-top-color: black;
+                border-top-color:$popover-boreder-color;
                 top: 100%;
             }
             &::after {
@@ -148,7 +148,7 @@
                 border-top: none;
             }
             &::before {
-                border-bottom-color: black;
+                border-bottom-color: $popover-boreder-color;
                 bottom: 100%;
             }
             &::after {
@@ -165,7 +165,7 @@
                 border-right: none;
             }
             &::before {
-                border-left-color: black;
+                border-left-color: $popover-boreder-color;
                 left: 100%;
             }
             &::after {
@@ -181,7 +181,7 @@
                 border-left: none;
             }
             &::before {
-                border-right-color: black;
+                border-right-color: $popover-boreder-color;
                 right: 100%;
             }
             &::after {

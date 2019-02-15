@@ -1,35 +1,16 @@
 <template>
     <div style="margin-top: 16px;">
-        <d-row class="demoRow">
-            <d-col span="24" class="bg-purple-dark">100%</d-col>
-
-        </d-row>
-        <d-row class="demoRow">
-            <d-col span="12" class="bg-purple-dark">50%</d-col>
-
-            <d-col span="12" class="bg-purple">50%</d-col>
-        </d-row>
-        <d-row class="demoRow">
-            <d-col span="8" class="bg-purple-dark">33%</d-col>
-            <d-col span="8" class="bg-purple">33%</d-col>
-            <d-col span="8" class="bg-purple-light">33%</d-col>
-        </d-row>
-
-
-        <d-row class="demoRow">
-            <d-col span="6" class="bg-purple-dark">25%</d-col>
-            <d-col span="6" class="bg-purple">25%</d-col>
-            <d-col span="6" class="bg-purple-light">25%</d-col>
-            <d-col span="6" class="bg-purple-dark">25%</d-col>
-        </d-row>
-
-        <d-row class="demoRow">
-            <d-col span="4" class="bg-purple-dark">20%</d-col>
-            <d-col span="4" class="bg-purple-light">20%</d-col>
-            <d-col span="4" class="bg-purple-dark">20%</d-col>
-            <d-col span="4" class="bg-purple-light">20%</d-col>
-            <d-col span="4" class="bg-purple-dark">20%</d-col>
-            <d-col span="4" class="bg-purple-light">20%</d-col>
+        <p><strong>预览</strong></p>
+        <d-row class="demoRow" gutter="10">
+            <d-col span="8">
+                <div class="bg-purple-dark">8</div>
+            </d-col>
+            <d-col span="8">
+                <div class="bg-purple-light">8</div>
+            </d-col>
+            <d-col span="8">
+                <div class="bg-purple-dark">8</div>
+            </d-col>
         </d-row>
     </div>
 

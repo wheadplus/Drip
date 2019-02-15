@@ -1,6 +1,6 @@
 <template>
     <div class="tabs-body">
-        <slot></slot>
+            <slot></slot>
     </div>
 </template>
 
@@ -12,7 +12,4 @@
 </script>
 
 <style lang="scss" scoped>
-    .tabs-body {
-
-    }
 </style>

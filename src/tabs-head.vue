@@ -25,7 +25,8 @@
                 this.$refs.line.style.width = `${width}px`
                 this.$refs.line.style.left = `${left - left2}px`
             }
-        }
+        },
+
     }
 </script>
 

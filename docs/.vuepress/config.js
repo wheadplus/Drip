@@ -1,36 +1,39 @@
 module.exports = {
-    base: '/Drip/',
+    base:'/Drip/',
     title: 'Drip-UI',
-    description: '一个很好用的UI框架',
+    description: 'vue UI',
+
     themeConfig: {
         nav: [
-            { text: 'Home', link: '/' },
-            { text: 'Guide', link: '/guide/' },
-            { text: 'External', link: 'https://google.com' },
+
+            { text: 'Github', link: '/https://github.com/wheadplus/Drip' },
         ],
         sidebar: [
-            {
-                title: '入门',
-                collapsable: false,
+            {title: '开始',
+                collapsable: true,
                 children: [
-                    ['/get-started/','快速上手'],
-                    ['/install/', '安装'],
+                    ['/', '介绍'],
+                    ['/get-started/install', '安装']
                 ]
             },
             {
                 title: '组件',
-                collapsable: false,
+                collapsable: true,
                 children: [
-                    '/components/button',
-                    '/components/button',
-                    '/components/button',
-                    '/components/button',
-                    '/components/button',
-                    '/components/button',
-                    '/components/button',
+                    ['/components/button', 'button - 按钮'],
+                    ['/components/input', 'input - 输入框'],
+                    ['/components/tabs', 'tabs - 标签类'],
+                    ['/components/grid', 'grid - 栅栏'],
+                    ['/components/layout', 'layout - 布局'],
+                    ['/components/popover', 'popover - 气泡卡片'],
+                    ['/components/toast', 'toast - 弹窗'],
                 ]
             },
-        ]
-    },
 
+
+
+
+        ]
+    }
 }
+

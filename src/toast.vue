@@ -1,6 +1,6 @@
 <template>
-    <div class="wrapper" :class="toastClasses">
-        <div class="toast" ref="toast">
+    <div class="toast-wrapper" :class="toastClasses">
+        <div class="drip-toast" ref="toast">
             <div class="message">
                 <slot v-if="!enableHtml"></slot>
                 <div v-else v-html="$slots.default[0]"></div>
@@ -99,11 +99,9 @@
         0% { opacity: 0; transform: translateY(-100%); }
         100% { opacity: 1; transform: translateY(0%);}
     }
-    .wrapper {
+    .toast-wrapper {
         position: fixed; left: 50%;
         transform: translateX(-50%);
-
-
         &.position-top {
             top: 0;
             .toast {
@@ -129,7 +127,7 @@
             }
         }
     }
-    .toast {
+    .drip-toast {
         font-size: $font-size; line-height: 1.8; min-height: $toast-min-height;
         display: flex; align-items: center;
         color: #FFFFFF; padding: 0 13px; border-radius: 3px;
